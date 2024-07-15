@@ -1,0 +1,131 @@
+body {
+  height: 100vh;
+}
+header {
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1vh;
+  flex-shrink: 0;
+}
+
+/* LOGO -------------------------------------------------- */
+.logo {
+  margin-left: 20px;
+  display: block;
+}
+#logo a {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #5113D6;
+}
+
+/* NAVBAR ------------------------------------------------- */
+.navbar {
+  margin: 10px 0 0 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.navbar a:hover {
+  color:#5113D6;
+}
+.navbar ul {
+  display: flex;
+  gap: 12px;
+  padding: 0;
+}
+.navbar li {
+  display: block;
+  font-weight: 600;
+}
+.navbar .link {
+  padding: 0 10px;
+}
+.navbar button {
+  width: 100px;
+  padding: 5px;
+  font-weight: 400;
+  border-radius: 16px;
+  background-color: transparent;
+  border: 2px solid #5113D6;
+  color: #444;
+}
+.navbar button:hover {
+  scale: 1.05;
+}
+
+/* DROPDOWN -------------------------------------------------- */
+#profile {
+  /* display: none; */
+  position: relative;
+  /* padding-bottom: 20px; */
+}
+.dropdown-menu {
+  display: none;
+  /* display: block; */
+  position: absolute;
+  right: 0;
+  margin-top: 15px;
+  padding: 0;
+  background-color: #fefefe;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  gap: 0;
+  min-width: 120px;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+/* DROPDOW CONTENT */
+.dropdown-menu li {
+  text-align: center;
+  border-bottom: 1px solid black;
+  display: block;
+}
+.dropdown-menu li a {
+  display: inline-block;
+  padding: 15px 0;
+  width: 150px;
+}
+.dropdown-menu li a:hover {
+  background-color: blue;
+  color: #fefefe;
+}
+
+/* SIDE menu ----------------------------------------------------- */
+.side_menu {
+  /* display: none; */
+  display: block;
+  margin: 10px 0 0 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #5113D6;
+  cursor: pointer;
+}
+
+/* Responsive ----------------------------------------------------- */
+
+@media screen and (max-width: 600px) {
+  /* .navbar a:not(:first-child) {display: none;} */
+  .navbar {
+    display: none;
+  }
+  .side_menu {
+    display: block;
+  }
+}
+
+/* @media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+} */

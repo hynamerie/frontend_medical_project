@@ -3,38 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>StayHealthy Meadical Services</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">  
     <link rel="stylesheet" href="./LandingPage.css">
+    <link rel="stylesheet" href="./navBar.css">
+
+    <script src="./"></script>
 </head>
 <body>
+    <header class="header">
+      <div class="logo" id="logo">
+        <a href="/">
+          StayHealthy
+          <i class="fa fa-user-md" aria-hidden="true"></i>
+          <!-- <i class="fa fa-search" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i> -->
+        </a>
+      </div>
+      <!--navbar pages  -->
+      <nav class="navbar">
+        <ul>
+          <li class="link"><a href="#">Home</a></li>
+          <li class="link"><a href="#">Appointments</a></li>
+          <li class="link"><a href="#">Health Blog</a></li>
+          <li class="link"><a href="#">Review</a></li>
+          <li class=" link dropdown" id="profile">
+            <a class="dropbtn">Profile</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Reports</a></li>
+              <li><a href="#">Settings</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li class="btn1">
+            <a href="#">
+              <button class="btn-log">Sign Up</button>
+            </a>
+          </li>
+          <li class="btn2">
+            <a href="#">
+              <button class="btn-log">Login</button>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- side menu -->
+      <div class="side_menu" onclick={handleClick}>
+        <i class="fa fa-times fa fa-bars"></i>
+      </div> 
+      
+    </header>
+    <!-- HEADER END -->
+
     <section class="hero-section">
         <div>
           <div data-aos="fade-up" class="flex-hero">
-              
-              <h1>
-                Your Health<br/>
-                <span class="text-gradient">
-                  
-                  Our Responsibility
-                </span>
-              </h1>
-                <div class="blob-cont">
-                    <div class="blue blob"></div>
-                </div>
-                <div class="blob-cont">
-                    <div class="blue1 blob"></div>
-                </div>
-              <h4>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque at quae ducimus. Suscipit omnis quibusdam non cum rem voluptatem! 
-              </h4>
-              <a href="#services">
-                <button class="button">Get Started</button>
-              </a>
-                
+            <h1>
+              Your Health<br/>
+              <span class="text-gradient">
+                Our Responsibility
+              </span>
+            </h1>
+            <div class="blob-cont">
+                <div class="blue blob"></div>
+            </div>
+            <div class="blob-cont">
+                <div class="blue1 blob"></div>
+            </div>
+            <h4>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque at quae ducimus. Suscipit omnis quibusdam non cum rem voluptatem! 
+            </h4>
+            <a href="#services">
+              <button class="button">Get Started</button>
+            </a>              
           </div>
   
         </div>
