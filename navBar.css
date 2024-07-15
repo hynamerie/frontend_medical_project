@@ -12,7 +12,7 @@ header {
 
 /* LOGO -------------------------------------------------- */
 .logo {
-  margin-left: 20px;
+  margin-left: 1vw;
   display: block;
 }
 #logo a {
@@ -31,17 +31,17 @@ header {
 .navbar a:hover {
   color:#5113D6;
 }
-.navbar ul {
+nav ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
   padding: 0;
 }
 .navbar li {
   display: block;
   font-weight: 600;
-}
-.navbar .link {
-  padding: 0 10px;
+  padding: 20px 10px;
 }
 .navbar button {
   width: 100px;
@@ -60,11 +60,9 @@ header {
 #profile {
   /* display: none; */
   position: relative;
-  /* padding-bottom: 20px; */
 }
 .dropdown-menu {
   display: none;
-  /* display: block; */
   position: absolute;
   right: 0;
   margin-top: 15px;
@@ -72,7 +70,6 @@ header {
   background-color: #fefefe;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   gap: 0;
-  min-width: 120px;
 }
 .dropdown:hover .dropdown-menu {
   display: block;
@@ -81,12 +78,12 @@ header {
 .dropdown-menu li {
   text-align: center;
   border-bottom: 1px solid black;
-  display: block;
+  padding: 0;
 }
 .dropdown-menu li a {
-  display: inline-block;
+  display: block;
   padding: 15px 0;
-  width: 150px;
+  width: 100px;
 }
 .dropdown-menu li a:hover {
   background-color: blue;
