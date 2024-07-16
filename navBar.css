@@ -1,6 +1,22 @@
+* {
+  margin: 0;
+  box-sizing: border-box; 
+  font-family: "Inter", sans-serif;
+}
 body {
   height: 100vh;
 }
+button, a {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+button {
+  font-size: 18px;
+}
+
 header {
   /* overflow: hidden; */
   display: flex;
@@ -8,7 +24,7 @@ header {
   align-items: center;
   height: 10vh;
   width: 100%;
-  padding: 1rem;
+  padding: 0 3rem;
 }
 
 /* LOGO -------------------------------------------------- */
@@ -106,7 +122,6 @@ nav ul {
 /* Responsive ----------------------------------------------------- */
 
 @media screen and (max-width: 1024px) {
-  /* .navbar a:not(:first-child) {display: none;} */
   header {
     padding: 1.3rem 5%;
   }
@@ -121,6 +136,10 @@ nav ul {
   }
   #check:checked~.side_menu #close-icon {
     display: block;
+  }
+  #check:checked~.navbar {
+    height: auto;
+    padding-bottom: 20px;
   }
   .navbar {
     display: grid;
@@ -145,8 +164,8 @@ nav ul {
   .navbar button {
     margin-top: 10px;
   }
-  #check:checked~.navbar {
-    height: auto;
-    padding-bottom: 20px;
+  .dropdown:hover #dropdown-pf {
+    display: none;
   }
+  
 }
