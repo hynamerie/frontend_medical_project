@@ -47,7 +47,7 @@ nav ul {
   padding: 5px;
   font-weight: 400;
   border-radius: 16px;
-  background-color: transparent;
+  background-color: rgba(0,0,0,0.1);
   border: 2px solid #5113D6;
   color: #444;
 }
@@ -123,20 +123,30 @@ nav ul {
     display: block;
   }
   .navbar {
-    display: block;
+    display: grid;
     position: absolute;
     top: 10vh;
     left: 0;
     width: 100%;
     height: 0;
-    background: yellow;
+    justify-items: center;
+    background: rgba(205, 205, 205, 0.1);
+    backdrop-filter: blur(20px);
     transition: .3s ease;
     overflow: hidden;
+    gap: 0;
   }
-  .navbar ul, .navbar button {
+  .navbar ul {
     display: block;
   }
+  .navbar li {
+    padding: 8px 0;
+  }
+  .navbar button {
+    margin-top: 10px;
+  }
   #check:checked~.navbar {
-    height: 400px;
+    height: auto;
+    padding-bottom: 20px;
   }
 }
