@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="./LandingPage.css">
     <link rel="stylesheet" href="./navBar.css">
 
-    <script src="./"></script>
 </head>
 <body>
     <header class="header">
@@ -21,9 +20,15 @@
           StayHealthy
           <i class="fa fa-user-md" aria-hidden="true"></i>
           <!-- <i class="fa fa-search" aria-hidden="true"></i>
-          <i class="fa fa-star" aria-hidden="true"></i> -->
+           -->
         </a>
       </div>
+      <!-- side menu -->
+      <input type="checkbox" id="check">
+      <label for="check" class="side_menu">
+        <i class="fa fa-times fa fa-bars" id="menu-icon"></i>
+        <i class="fa fa-star" aria-hidden="true" id="close-icon"></i>
+      </label> 
       <!--navbar pages  -->
       <nav class="navbar">
         <ul>
@@ -33,7 +38,7 @@
           <li class="link"><a href="#">Review</a></li>
           <li class=" link dropdown" id="profile">
             <a class="dropbtn">Profile</a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu" id="dropdown-pf">
               <li><a href="#">Reports</a></li>
               <li><a href="#">Settings</a></li>
             </ul>
@@ -44,10 +49,6 @@
           <button class="btn-log">Login</button>
         </div>
       </nav>
-      <!-- side menu -->
-      <div class="side_menu" onclick={handleClick}>
-        <i class="fa fa-times fa fa-bars"></i>
-      </div> 
       
     </header>
     <!-- HEADER END -->
