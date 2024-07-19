@@ -46,7 +46,7 @@ header {
 .navbar a:hover {
   color:#5113D6;
 }
-nav ul {
+nav ul, .btn-log {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
