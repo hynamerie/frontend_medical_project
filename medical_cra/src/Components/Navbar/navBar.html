@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StayHealthy Meadical Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">  
+    <link rel="stylesheet" href="./LandingPage.css">
+    <link rel="stylesheet" href="./navBar.css">
+
+</head>
+<body>
+    <header class="header">
+      <div class="logo" id="logo">
+        <a href="/LandingPage.html">
+          StayHealthy
+          <i class="fa fa-user-md" aria-hidden="true"></i>
+          <!-- <i class="fa fa-search" aria-hidden="true"></i>
+           -->
+        </a>
+      </div>
+      <!-- side menu -->
+      <input type="checkbox" id="check">
+      <label for="check" class="side_menu">
+        <i class="fa fa-times fa fa-bars" id="menu-icon"></i>
+        <i class="fa fa-times" aria-hidden="true" id="close-icon"></i>
+      </label> 
+      <!--navbar pages  -->
+      <nav class="navbar">
+        <ul>
+          <li class="link"><a href="#">Home</a></li>
+          <li class="link"><a href="#">Appointments</a></li>
+          <li class="link"><a href="#">Health Blog</a></li>
+          <li class="link"><a href="#">Review</a></li>
+          <li class=" link dropdown" id="profile">
+            <a class="dropbtn">Profile</a>
+            <ul class="dropdown-menu" id="dropdown-pf">
+              <li><a href="#">Reports</a></li>
+              <li><a href="#">Settings</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div>
+          <button class="btn-log"><a href="./SignUp/SignUp.html">Sign Up</a></button>
+          <button class="btn-log"><a href="./SignUp/Login.html">Login</a></button>
+        </div>
+      </nav>
+      
+    </header>
+    <!-- HEADER END -->
+
+</body>
+</html>

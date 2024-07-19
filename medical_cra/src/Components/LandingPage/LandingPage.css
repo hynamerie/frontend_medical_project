@@ -1,0 +1,122 @@
+
+/* HERO SECTION */
+.hero-section {
+    height: 90vh;
+    padding: 25vh 0;
+    /* background-color: transparent;
+    z-index: -1; */
+}
+.hero-section .flex-hero {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+
+/* TEXT */
+.hero-section h1 {
+    font-size: 56px;
+    font-weight: 900;
+}
+.text-gradient {
+    background: linear-gradient(45deg,#2190FF 2.34%,#b673f8 100.78%);
+    /* -webkit-background-clip: text; */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero-section h4 {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0px 4rem;
+}
+
+/* BUTTON */
+.hero-section .button {
+    /* padding: 0.7rem 2rem; */
+    background-color: #2190FF;
+    border: 1px solid transparent;
+    color: #fff;
+    padding: 1em;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+.button:hover {
+    transform: scale(0.98);
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* .hero-section div:nth-child(2) {
+    margin-top: 4rem;
+} */
+/* .hero-section .image {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+} */
+
+@media screen and (min-width:600px) {
+    .hero-section button {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .hero-section h1 {
+        font-size: 24px;
+    }
+    .hero-section h4 {
+        font-size: 14px;
+        padding: 0px 2rem;
+    }
+    .hero-section button {
+        width: 80%;
+    }
+
+}
+
+/* Blobs */
+.flex-hero .blob-cont {
+    justify-content: center;
+    align-items: center;
+    position: static;
+    margin: 10px;
+}
+.blob {
+    border-radius: 100px;
+    filter: blur(60px);
+}
+.blue {
+    background-color: #2937a392;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 55%;
+    bottom: 25%;
+    margin: auto;
+    height: 150px;
+    width: 200px;
+    animation: blobani 8s infinite ease;
+}
+.blue1 {
+    background-color: #2937a392;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: -55%;
+    bottom: -25%;
+    margin: auto;
+    height: 150px;
+    width: 200px;
+    animation: blobani 8s infinite ease;
+}
+  
+  
+  /* @keyframes blobani {
+    0% {top: 0; left: 0; transform: scale(1);}
+    30% {top: 0; left: 0; transform: scale(1.2);}
+    60% {top: 0; left: 0; transform: scale(1.3);}
+    100% {top: 0; left: 0; transform: scale(1);}
+  }
+   */
