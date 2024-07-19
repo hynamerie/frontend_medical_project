@@ -1,12 +1,13 @@
 import "./navBar.css";
 import React from 'react';
+import { Link } from "react-router-dom";
 
 function Navbar() {
 
   return (
     <header className="header">
       <div className="logo" id="logo">
-        <a href="/LandingPage.html">
+        <a href="/">
           StayHealthy
           <i className="fa fa-user-md" aria-hidden="true"></i>
         </a>
@@ -31,8 +32,16 @@ function Navbar() {
           </li>
         </ul>
         <div>
-          <button className="btn-log"><a href="./SignUp/SignUp.html">Sign Up</a></button>
-          <button className="btn-log"><a href="./SignUp/Login.html">Login</a></button>
+          <button className="btn-log">
+            <Link to="/signup">
+              Sign Up
+            </Link>
+          </button>
+          <button className="btn-log">
+            <Link to="/login">
+              Login
+            </Link>
+          </button>
         </div>
       </nav>
     </header>
