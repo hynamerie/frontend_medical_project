@@ -13,7 +13,7 @@ function Navbar() {
         </a>
       </div>
       <input type="checkbox" id="check"/>
-      <label for="check" className="side_menu">
+      <label htmlFor="check" className="side_menu">
         <i className="fa fa-times fa fa-bars" id="menu-icon"></i>
         <i className="fa fa-times" aria-hidden="true" id="close-icon"></i>
       </label> 

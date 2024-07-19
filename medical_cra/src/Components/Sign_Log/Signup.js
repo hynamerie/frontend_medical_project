@@ -57,7 +57,7 @@ const Sign_Up = () => {
 
     return (
       <>
-      <div class="head-text">
+      <div className="head-text">
         <h1>Sign Up</h1>
         <div>
           Already a member? 
@@ -83,18 +83,18 @@ const Sign_Up = () => {
           </div>
         </div>
 
-        <div class="form-group">
-          <label for="name">Name</label>
+        <div className="form-group">
+          <label htmlFor="name">Name</label>
           <input type="text" name="name" id="name" required
-            class="form-control" placeholder="Enter your name"
+            className="form-control" placeholder="Enter your name"
             value={name} onChange={(e)=>setName(e.target.value)}
             />
         </div>
 
-        <div class="form-group">
-          <label for="phone">Phone</label>
+        <div className="form-group">
+          <label htmlFor="phone">Phone</label>
           <input type="tel" name="phone" id="phone" required
-            class="form-control" placeholder="Enter your phone number"
+            className="form-control" placeholder="Enter your phone number"
             value={phone} onChange={(e)=>setPhone(e.target.value)}
             />
         </div>
@@ -108,17 +108,17 @@ const Sign_Up = () => {
           {/* {showerr && <div className="err" style={{ color: 'red' }}>{showerr}</div>} */}
         </div>
 
-        <div class="form-group">
-          <label for="pwd">Password</label>
+        <div className="form-group">
+          <label htmlFor="pwd">Password</label>
           <input type="password" name="pwd" id="pwd" required
-          class="form-control" placeholder="Enter your password"
+          className="form-control" placeholder="Enter your password"
           />
         </div>
 
-        <div class="btn-group">
-          <button type="submit" class="btn-primary">Submit</button>
+        <div className="btn-group">
+          <button type="submit" className="btn-primary">Submit</button>
           <br/>
-          <button type="reset" class="btn-danger">Reset</button>
+          <button type="reset" className="btn-danger">Reset</button>
         </div>
 
       </form>
