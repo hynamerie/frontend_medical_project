@@ -1,8 +1,11 @@
 import "./navBar.css";
 import React from 'react';
 import { Link } from "react-router-dom";
+// import { useAuth } from "../Sign_Log/auth";
 
 function Navbar() {
+
+  // const auth = useAuth();
 
   return (
     <header className="header">
@@ -47,10 +50,16 @@ function Navbar() {
           <button>
             <Link to="/signup">Sign Up</Link>
           </button>
-          <button>
-            <Link to="/login">Login</Link>
-          </button>
-        </div>
+          </div>
+          {/* {
+            !auth.user &&           
+            <div>
+            <button>
+              <Link to="/login">Login</Link>
+            </button>
+            </div>
+  
+          } */}
       </nav>
     </header>
   );
