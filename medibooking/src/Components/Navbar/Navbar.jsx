@@ -33,9 +33,11 @@ function Navbar() {
           <li className="link">
             <a href="#">Review</a>
           </li>
-          <li className=" link dropdown" id="profile">
+        </ul>
+        <ul>
+          <li className=" link dropdown-pf" id="profile">
             <a className="dropbtn">Profile</a>
-            <ul className="dropdown-menu" id="dropdown-pf">
+            <ul className="dropdown-pf-menu" id="dropdown-pf">
               <li>
                 <a href="#">Reports</a>
               </li>
@@ -49,16 +51,10 @@ function Navbar() {
           <button>
             Sign Up
           </button>
+          <button>
+            Login
+          </button>
         </div>
-          {/* {
-            !auth.user &&           
-            <div>
-            <button>
-              <Link to="/login">Login</Link>
-            </button>
-            </div>
-  
-          } */}
       </nav>
     </div>
   );

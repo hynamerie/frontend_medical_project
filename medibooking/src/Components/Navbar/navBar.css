@@ -67,21 +67,21 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   /* gap: 0; */
 }
-.dropdown:hover #dropdown-pf {
+.dropdown-pf:hover #dropdown-pf {
   display: block;
 }
 /* DROPDOW CONTENT */
-.dropdown-menu li {
+.dropdown-pf-menu li {
   text-align: center;
   border-bottom: 1px solid black;
   padding: 0;
 }
-.dropdown-menu li a {
+.dropdown-pf-menu li a {
   display: block;
   padding: 15px 0;
   width: 100px;
 }
-.dropdown-menu li a:hover {
+.dropdown-pf-menu li a:hover {
   background-color: blue;
   color: #fefefe;
 }
@@ -145,7 +145,7 @@
   .navbar button {
     margin-top: 10px;
   }
-  .dropdown:hover #dropdown-pf {
+  .dropdown-pf:hover #dropdown-pf {
     display: none;
   }
   
