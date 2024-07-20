@@ -1,23 +1,4 @@
-* {
-  margin: 0;
-  box-sizing: border-box; 
-  font-family: "Inter", sans-serif;
-}
-body {
-  height: 100vh;
-}
-button, a {
-  cursor: pointer;
-}
-a {
-  text-decoration: none;
-  color: #333;
-}
-button {
-  font-size: 18px;
-}
-
-header {
+.header {
   /* overflow: hidden; */
   display: flex;
   justify-content: space-between;
@@ -46,7 +27,7 @@ header {
 .navbar a:hover {
   color:#5113D6;
 }
-nav ul, .btn-log {
+.navbar ul, .btn-log {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -109,7 +90,7 @@ nav ul, .btn-log {
 .side_menu {
   display: none;
   position: absolute;
-  right: 5%;
+  right: 10%;
   font-size: 2rem;
   font-weight: 600;
   color: #5113D6;
@@ -122,7 +103,7 @@ nav ul, .btn-log {
 /* Responsive ----------------------------------------------------- */
 
 @media screen and (max-width: 1024px) {
-  header {
+  .header {
     padding: 1.3rem 5%;
   }
   .side_menu {
