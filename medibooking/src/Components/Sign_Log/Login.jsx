@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
 import './signup.css'
-
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-// import { useAuth } from './auth';
+import { Link, useLocation } from 'react-router-dom';
 
 const Login = () => {
-
-  // const [password, setPassword] = useState("");
-  // const [email, setEmail] = useState('');
-  const [user, setUser] = useState('');
-  // const auth = useAuth();
-  const navigate = useNavigate();
-  const handleLogin = () => {
-    auth.login(user);
-    navigate('/');
+  const [loginData, setLoginData] = useState({email: "", password: ""})
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(loginData);
   }
+  function handleChange(e) {
+    const {name, value} = e.target;
+    setLoginData(prev => (
+      {...prev, [name]: value}
+    ))
+  }
+
+  const location = useLocation();
 
   return (
     <div>
         <div className="head-text">
+        {location.state?.message && <h3 className='log-notice'>{location.state.message}</h3>}
           <h1>Login</h1>
           <div>
             Are you a new member? 
@@ -36,19 +37,21 @@ const Login = () => {
             <label htmlFor="email">Email</label>
             <input type="email" name="email" id="email" required
               className="form-control" placeholder="Enter your email"
-              // value={email} onChange={(e)=>setEmail(e.target.value)}
-              onChange={e => setUser(e.target.value)}
-            />
+              value={loginData.email}
+              onChange={handleChange}
+              />
           </div>
           <div className="form-group">
             <label htmlFor="pwd">Password</label>
-            <input type="password" name="pwd" id="pwd" required
+            <input type="password" name="password" id="pwd" required
               className="form-control" placeholder="Enter your password"
+              value={loginData.password}
+              onChange={handleChange}
             />
           </div>
           <div className="btn-group">
             <button type="submit" className="btn-primary"
-            onClick={handleLogin}
+            onClick={handleSubmit}
             >
               Submit
             </button>

@@ -8,6 +8,7 @@ export default function Auth() {
     return (
       <Navigate 
         to="./login"
+        state={{message: "Please log in first!"}}
       />
     )
   }
