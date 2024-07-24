@@ -3,16 +3,19 @@ import './signup.css'
 import { Link, useLocation } from 'react-router-dom';
 
 const Login = () => {
+
   const [loginData, setLoginData] = useState({email: "", password: ""})
-  function handleSubmit(e) {
-    e.preventDefault();
-    console.log(loginData);
-  }
+
   function handleChange(e) {
     const {name, value} = e.target;
     setLoginData(prev => (
       {...prev, [name]: value}
     ))
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(loginData);
   }
 
   const location = useLocation();
