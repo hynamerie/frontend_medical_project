@@ -28,7 +28,7 @@ const Sign_Up = () => {
           </span>
         </div>
       </div>
-      <form action="" className="sign-form">
+      <form action="" className="sign-form" onSubmit={handleSubmit}>
         <div className="select-group">
           <label htmlFor="role">Role</label>
           <div className="select-body">
@@ -53,7 +53,8 @@ const Sign_Up = () => {
 
         <div className="form-group">
           <label htmlFor="phone">Phone</label>
-          <input type="tel" name="phone" id="phone" required
+          <input type="tel" name="phone" id="phone" 
+            required pattern='[0-9]{10}' title='must include 10 numbers'
             className="form-control" placeholder="Enter your phone number"
             value={phone} onChange={(e)=>setPhone(e.target.value)}
             />
@@ -61,7 +62,7 @@ const Sign_Up = () => {
 
         <div className="form-group">
           <label htmlFor="email">Email</label>
-          <input type="email" name="email" id="email" 
+          <input type="email" name="email" id="email" required
             className="form-control" placeholder="Enter your email" aria-describedby="helpId"
             value={email} onChange={(e) => setEmail(e.target.value)}
           />
@@ -76,7 +77,7 @@ const Sign_Up = () => {
         </div>
 
         <div className="btn-group">
-          <button type="submit" className="btn-primary" onClick={handleSubmit}
+          <button type="submit" className="btn-primary"
             >Submit</button>
           <br/>
           <button type="reset" className="btn-danger">Reset</button>

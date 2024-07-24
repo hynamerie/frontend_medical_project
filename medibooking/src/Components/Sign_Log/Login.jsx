@@ -5,17 +5,20 @@ import { Link, useLocation } from 'react-router-dom';
 const Login = () => {
 
   const [loginData, setLoginData] = useState({email: "", password: ""})
+  const [user, setUser] = useState("");
 
   function handleChange(e) {
     const {name, value} = e.target;
     setLoginData(prev => (
       {...prev, [name]: value}
-    ))
+    ));
+    setUser("Welcome back!")
   }
 
   function handleSubmit(e) {
     e.preventDefault();
     console.log(loginData);
+    console.log(user)
   }
 
   const location = useLocation();
@@ -35,10 +38,11 @@ const Login = () => {
           </div>
         </div>
 
-        <form action="" className="sign-form">
+        <form action="" className="sign-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="email">Email</label>
-            <input type="email" name="email" id="email" required
+            <input type="email" name="email" id="email" 
+              required
               className="form-control" placeholder="Enter your email"
               value={loginData.email}
               onChange={handleChange}
@@ -46,7 +50,8 @@ const Login = () => {
           </div>
           <div className="form-group">
             <label htmlFor="pwd">Password</label>
-            <input type="password" name="password" id="pwd" required
+            <input type="password" name="password" id="pwd" 
+              required pattern=".{6,}" title="include 6 or more characters"
               className="form-control" placeholder="Enter your password"
               value={loginData.password}
               onChange={handleChange}
@@ -54,7 +59,6 @@ const Login = () => {
           </div>
           <div className="btn-group">
             <button type="submit" className="btn-primary"
-            onClick={handleSubmit}
             >
               Submit
             </button>
