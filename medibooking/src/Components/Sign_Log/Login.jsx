@@ -3,14 +3,14 @@ import './signup.css'
 
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from './auth';
+// import { useAuth } from './auth';
 
 const Login = () => {
 
   // const [password, setPassword] = useState("");
   // const [email, setEmail] = useState('');
   const [user, setUser] = useState('');
-  const auth = useAuth();
+  // const auth = useAuth();
   const navigate = useNavigate();
   const handleLogin = () => {
     auth.login(user);
