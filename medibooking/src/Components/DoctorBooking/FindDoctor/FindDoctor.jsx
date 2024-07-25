@@ -16,7 +16,7 @@ const FindDoctor = () => {
       setSearch(speciality);
       setResultHidden(true);
       navigate(`/doctor-booking?speciality=${speciality}`);
-      window.location.reload();
+      // window.location.reload();
   }
   return (
     <section className='find-doctor'>
@@ -24,7 +24,7 @@ const FindDoctor = () => {
         <h2>Find doctor at your own ease</h2>
       </div>
       <div>
-        <img src={imgUrl} width="500px" hidden={!resultHidden}/>
+        <img src={imgUrl} hidden={!resultHidden || search}/>
       </div>
       <div className='search-container'>
           <div className="search-bar">
@@ -33,7 +33,9 @@ const FindDoctor = () => {
               onFocus={() => setResultHidden(false)}
               onBlur={() => setResultHidden(true)}
             />
-            <i className="fa fa-search search-icon" aria-hidden="true"></i>
+            <div hidden={!resultHidden}>
+            <i className="fa fa-search search-icon" aria-hidden="true" ></i>
+            </div>
           </div>
           <div className="search-result" hidden={resultHidden}>
           {
