@@ -10,6 +10,7 @@ const initSpeciality = [
 const FindDoctor = () => {
   const [resultHidden, setResultHidden] = useState(true);
   const [search, setSearch] = useState('');
+  // const [specialities, setSpecialities] = useState(initSpeciality);
   const navigate = useNavigate();
   const handleSelect = (speciality) => {
       setSearch(speciality);
@@ -19,31 +20,31 @@ const FindDoctor = () => {
   }
   return (
     <section className='find-doctor'>
-      <h2>Find doctor at your own ease</h2>
       <div>
-        <img src={imgUrl} alt="doctors"/>
+        <h1>Find doctor at your own ease</h1>
       </div>
-      <div className="search-container"> 
+      <div>
+        <img src={imgUrl} width="500px" />
+      </div>
+      <div className='search-container'>
         <div className="search-box">
-          <div className='search-bar'>
-            <input type="text" className="search-input" placeholder="Search doctors, clinics, hospitals, etc." 
+          <div className="search-bar">
+            <input type="text" className="search-input" placeholder="Search doctors by specialty" 
               value={search} onChange={(e) => setSearch(e.target.value)}
-              onFocus={() => setResultHidden(false)}   //click inside
-              onBlur={() => setResultHidden(true)}  //click outside
+              onFocus={() => setResultHidden(false)}
+              onBlur={() => setResultHidden(true)}
             />
             <i className="fa fa-search search-icon" aria-hidden="true"></i>
           </div>
           <div className="search-result" hidden={resultHidden}>
-            {
-              initSpeciality.map(speciality => ( 
-              <div className="search-result-item" onMouseDown={() => handleSelect(speciality)}>
-                <i className="fa fa-search search-icon" aria-hidden="true"></i>
-                <span key={speciality}  >
-                  {speciality}
-                </span>
-              </div>
-              ))
-            }
+          {
+            initSpeciality.map(speciality => 
+            <div className="search-result-item" 
+              key={speciality} onMouseDown={() => handleSelect(speciality)}>
+              <i className="fa fa-search search-icon" aria-hidden="true"></i>
+              <span>{speciality}</span>
+            </div>)
+          }
           </div>
         </div>
       </div>

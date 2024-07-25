@@ -31,7 +31,7 @@
     cursor: pointer;
 }
 .search-icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 .search-result {
     width: 100%;
@@ -59,4 +59,8 @@
         height: auto;
         width: 90vw;
     }
+}
+
+h1 ~ h2 {
+    color: red;
 }
