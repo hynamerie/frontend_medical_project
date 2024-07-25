@@ -1,12 +1,17 @@
 * {
   box-sizing: border-box;
 }
-.head-text {
-  margin-top: 100px;
-  text-align: center;
+body {
+  max-width: 600px;
+  margin: 10vh auto;
+  font-family: "Inter", sans-serif;
 }
-.head-text span {
-  margin-left: 5px;
+a {
+  text-decoration: none;
+}
+
+.head-text {
+  text-align: center;
 }
 
 .sign-form {
@@ -78,8 +83,3 @@
   font-size: 16px;
   font-weight: 300;
 }
-.under-text span {
-  color: red;
-  margin-left: 5px;
-}
-
