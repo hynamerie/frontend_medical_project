@@ -54,9 +54,11 @@ function Navbar() {
             <Link to="./signup">Sign Up</Link>
           </button>
           <button>
-          <Link to="./login">Login</Link>
+            <Link to="./login">Login</Link>
           </button>
-          <button onClick={logOut}>Log out</button>
+          <button onClick={logOut}>
+            <Link to="/">Log out</Link>  
+          </button>
         </div>
       </nav>
     </div>

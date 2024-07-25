@@ -8,6 +8,7 @@ import Profile from "./Components/Pages/Profile"
 import Auth from "./Components/Sign_Log/Auth"
 import Login from "./Components/Sign_Log/Login"
 import Signup from "./Components/Sign_Log/Signup"
+// import "./server"
 
 
 function App() {

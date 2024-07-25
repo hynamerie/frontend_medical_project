@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './signup.css'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+// import { logUser } from '../../api';
 
 const Login = () => {
 
@@ -13,7 +14,7 @@ const Login = () => {
     setLoginData(prev => (
       {...prev, [name]: value}
     ));
-    setUser("Welcome back!")
+    setUser("Welcome back, User!")
   }
 
   function handleSubmit(e) {
@@ -22,6 +23,12 @@ const Login = () => {
     console.log(user)
     localStorage.setItem("loggedin", true);
     navigate("/profile", {replace: true})
+
+    // logUser(loginData).then(data => {
+    //   console.log(data);
+    //   localStorage.setItem("loggedin", true);
+    //   navigate("/profile", {replace: true})
+    // });
   }
 
   const location = useLocation();
@@ -54,7 +61,8 @@ const Login = () => {
           <div className="form-group">
             <label htmlFor="pwd">Password</label>
             <input type="password" name="password" id="pwd" 
-              required pattern=".{6,}" title="include 6 or more characters"
+              required 
+              // pattern=".{6,}" title="include 6 or more characters"
               className="form-control" placeholder="Enter your password"
               value={loginData.password}
               onChange={handleChange}

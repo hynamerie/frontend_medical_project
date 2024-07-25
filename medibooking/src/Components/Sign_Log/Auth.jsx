@@ -1,8 +1,8 @@
 import React from 'react'
-import { Navigate } from 'react-router-dom'
+import { Navigate, Outlet } from 'react-router-dom'
 
 export default function Auth() {
-  // const isLogined = true;
+  // const isLogined = false;
   const isLogined = localStorage.getItem("loggedin");
   
   if (!isLogined) {
@@ -14,4 +14,6 @@ export default function Auth() {
       />
     )
   }
+
+  return <Outlet/>
 }
