@@ -1,18 +1,16 @@
 .find-doctor {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
     margin-top: 10vh;
+    overflow: hidden;
 }
 .find-doctor img {
     height: 40vh;
 }
 .search-container {
-    display: flex;
-    justify-content: center;
-}
-.search-box {
-    width: 600px;
+    width: 500px;
     height: auto;
 }
 .search-bar {
@@ -29,6 +27,9 @@
     font-size: medium;
     border: 0px;
     cursor: pointer;
+}
+.search-input:focus {
+    outline: none;
 }
 .search-icon {
     font-size: 1.5rem;

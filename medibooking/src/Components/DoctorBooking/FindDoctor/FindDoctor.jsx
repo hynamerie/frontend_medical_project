@@ -5,7 +5,7 @@ import './FindDoctor.css';
 import imgUrl from "../../../assets/bro2.png"
 
 const initSpeciality = [
-  'Dentist', 'General Physician', 'Dermatologist', 'Gynecologist/obstetrician'
+  'Dentist', 'General Physician', 'Dermatologist', 'Gynecologist/obstetrician', 'Cardiology/cardiologist ', 'Dermatology/dermatologist'
 ]
 const FindDoctor = () => {
   const [resultHidden, setResultHidden] = useState(true);
@@ -21,13 +21,12 @@ const FindDoctor = () => {
   return (
     <section className='find-doctor'>
       <div>
-        <h1>Find doctor at your own ease</h1>
+        <h2>Find doctor at your own ease</h2>
       </div>
       <div>
-        <img src={imgUrl} width="500px" />
+        <img src={imgUrl} width="500px" hidden={!resultHidden}/>
       </div>
       <div className='search-container'>
-        <div className="search-box">
           <div className="search-bar">
             <input type="text" className="search-input" placeholder="Search doctors by specialty" 
               value={search} onChange={(e) => setSearch(e.target.value)}
@@ -46,7 +45,6 @@ const FindDoctor = () => {
             </div>)
           }
           </div>
-        </div>
       </div>
     </section>
   )
