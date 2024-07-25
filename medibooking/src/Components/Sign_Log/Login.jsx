@@ -1,42 +1,25 @@
 import React, { useState } from 'react';
 import './signup.css'
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-// import { logUser } from '../../api';
+
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from './auth';
 
 const Login = () => {
 
-  const [loginData, setLoginData] = useState({email: "", password: ""})
-  const [user, setUser] = useState("");
+  // const [password, setPassword] = useState("");
+  // const [email, setEmail] = useState('');
+  const [user, setUser] = useState('');
+  const auth = useAuth();
   const navigate = useNavigate();
-
-  function handleChange(e) {
-    const {name, value} = e.target;
-    setLoginData(prev => (
-      {...prev, [name]: value}
-    ));
-    setUser("Welcome back, User!")
+  const handleLogin = () => {
+    auth.login(user);
+    navigate('/');
   }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    console.log(loginData);
-    console.log(user)
-    localStorage.setItem("loggedin", true);
-    navigate("/profile", {replace: true})
-
-    // logUser(loginData).then(data => {
-    //   console.log(data);
-    //   localStorage.setItem("loggedin", true);
-    //   navigate("/profile", {replace: true})
-    // });
-  }
-
-  const location = useLocation();
 
   return (
     <div>
         <div className="head-text">
-        {location.state?.message && <h3 className='log-notice'>{location.state.message}</h3>}
           <h1>Login</h1>
           <div>
             Are you a new member? 
@@ -48,28 +31,24 @@ const Login = () => {
           </div>
         </div>
 
-        <form action="" className="sign-form" onSubmit={handleSubmit}>
+        <form action="" className="sign-form">
           <div className="form-group">
             <label htmlFor="email">Email</label>
-            <input type="email" name="email" id="email" 
-              required
+            <input type="email" name="email" id="email" required
               className="form-control" placeholder="Enter your email"
-              value={loginData.email}
-              onChange={handleChange}
-              />
+              // value={email} onChange={(e)=>setEmail(e.target.value)}
+              onChange={e => setUser(e.target.value)}
+            />
           </div>
           <div className="form-group">
             <label htmlFor="pwd">Password</label>
-            <input type="password" name="password" id="pwd" 
-              required 
-              // pattern=".{6,}" title="include 6 or more characters"
+            <input type="password" name="pwd" id="pwd" required
               className="form-control" placeholder="Enter your password"
-              value={loginData.password}
-              onChange={handleChange}
             />
           </div>
           <div className="btn-group">
             <button type="submit" className="btn-primary"
+            onClick={handleLogin}
             >
               Submit
             </button>
