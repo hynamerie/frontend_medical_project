@@ -1,10 +1,12 @@
 import "./navBar.css";
 import React from 'react';
-// import { useAuth } from "../Sign_Log/auth";
+import { Link } from 'react-router-dom';
 
 function Navbar() {
 
-  // const auth = useAuth();
+  function logOut() {
+    localStorage.removeItem("loggedin");
+  }
 
   return (
     <div className="header">
@@ -21,22 +23,22 @@ function Navbar() {
       </label> 
       <nav className="navbar">
         <ul>
-          <li className="link">
+          {/* <li className="link">
             <a href="#">Home</a>
-          </li>
+          </li> */}
           <li className="link">
-            <a href="#">Appointments</a>
+            <Link to="/booking">Appointments</Link>
           </li>
-          <li className="link">
+          {/* <li className="link">
             <a href="#">Health Blog</a>
-          </li>
+          </li> */}
           <li className="link">
-            <a href="#">Review</a>
+            <Link to="/review">Review</Link>
           </li>
         </ul>
         <ul>
           <li className=" link dropdown-pf" id="profile">
-            <a className="dropbtn">Profile</a>
+            <Link to="/profile" className="dropbtn">Profile</Link>
             <ul className="dropdown-pf-menu" id="dropdown-pf">
               <li>
                 <a href="#">Reports</a>
@@ -49,10 +51,13 @@ function Navbar() {
         </ul>
         <div className="btn-log">
           <button>
-            Sign Up
+            <Link to="./signup">Sign Up</Link>
           </button>
           <button>
-            Login
+            <Link to="./login">Login</Link>
+          </button>
+          <button onClick={logOut}>
+            <Link to="/">Log out</Link>  
           </button>
         </div>
       </nav>
