@@ -1,11 +1,7 @@
 import "./navBar.css";
 import React from 'react';
-// import { useAuth } from "../Sign_Log/auth";
 
 function Navbar() {
-
-  // const auth = useAuth();
-
   return (
     <div className="header">
       <div className="logo" id="logo">
