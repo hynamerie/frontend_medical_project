@@ -9,6 +9,8 @@ import Auth from "./Components/Sign_Log/Auth"
 import Login from "./Components/Sign_Log/Login"
 import Signup from "./Components/Sign_Log/Signup"
 // import "./server"
+import BookingService from "./Components/DoctorBooking/BookingService"
+import FindDoctor from "./Components/DoctorBooking/FindDoctor/FindDoctor"
 
 
 function App() {
@@ -27,6 +29,10 @@ function App() {
 
           <Route path="/login" element={<Login/>} />
           <Route path="/signup" element={<Signup/>} />
+
+          <Route path="/doctor-booking" element={<BookingService/>}>
+            <Route index element={<FindDoctor/>}/>
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

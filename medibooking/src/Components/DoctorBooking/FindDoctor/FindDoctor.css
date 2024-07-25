@@ -1,0 +1,62 @@
+.find-doctor {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10vh;
+}
+.find-doctor img {
+    height: 40vh;
+}
+.search-container {
+    display: flex;
+    justify-content: center;
+}
+.search-box {
+    width: 600px;
+    height: auto;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 0 20px 0 0;
+}
+.search-input {
+    padding: 14px 20px;
+    width: 100%;
+    font-size: medium;
+    border: 0px;
+    cursor: pointer;
+}
+.search-icon {
+    font-size: 2rem;
+}
+.search-result {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border: 1px solid #555;
+}
+.search-result-item {
+    height: 60px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px;
+    cursor: pointer;
+    text-align: left;
+}
+.search-result-item:hover {
+    background-color: #f0f0f5;
+}
+
+@media screen and (max-width: 600px) {
+    .find-doctor img {
+        height: auto;
+        width: 90vw;
+    }
+}
