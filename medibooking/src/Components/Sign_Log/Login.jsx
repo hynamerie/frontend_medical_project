@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './signup.css'
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
   const [loginData, setLoginData] = useState({email: "", password: ""})
   const [user, setUser] = useState("");
+  const navigate = useNavigate();
 
   function handleChange(e) {
     const {name, value} = e.target;
@@ -19,6 +20,8 @@ const Login = () => {
     e.preventDefault();
     console.log(loginData);
     console.log(user)
+    localStorage.setItem("loggedin", true);
+    navigate("/profile", {replace: true})
   }
 
   const location = useLocation();

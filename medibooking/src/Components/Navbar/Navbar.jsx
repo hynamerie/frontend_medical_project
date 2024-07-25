@@ -1,11 +1,12 @@
 import "./navBar.css";
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import { useAuth } from "../Sign_Log/auth";
 
 function Navbar() {
 
-  // const auth = useAuth();
+  function logOut() {
+    localStorage.removeItem("loggedin");
+  }
 
   return (
     <div className="header">
@@ -55,6 +56,7 @@ function Navbar() {
           <button>
           <Link to="./login">Login</Link>
           </button>
+          <button onClick={logOut}>Log out</button>
         </div>
       </nav>
     </div>
