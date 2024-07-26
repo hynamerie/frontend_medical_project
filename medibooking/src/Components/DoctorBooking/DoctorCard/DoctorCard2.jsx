@@ -52,7 +52,7 @@ const DoctorCard = ({ name, speciality, experience, ratings }) => {
 
 
       <div className="doctor-card-options-container">
-       {/* <Popup */}
+       <Popup
           style={{ backgroundColor: '#FFFFFF' }}
           trigger={
             <button className={`book-appointment-btn ${appointments.length > 0 ? 'cancel-appointment' : ''}`}>
@@ -67,7 +67,7 @@ const DoctorCard = ({ name, speciality, experience, ratings }) => {
           modal
           open={showModal}
           onClose={() => setShowModal(false)}
-        {/* > */}
+        >
           {(close) => (
             <div className="doctorbg" style={{ height: '100vh', overflow: 'scroll' }}>
               <div>
@@ -98,7 +98,7 @@ const DoctorCard = ({ name, speciality, experience, ratings }) => {
               )}
             </div>
           )}
-        {/* </Popup>  */}
+        </Popup>
       </div>
     </div>
   );

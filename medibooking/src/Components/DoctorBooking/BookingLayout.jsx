@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import "./Booking.css"
 
-function BookingService() {
+function BookingLayout() {
   const [searchParams] = useSearchParams();
   const [doctors, setDoctors] = useState([]);
   const [filteredDoctors, setFilteredDoctors] = useState([]);
@@ -78,4 +78,4 @@ function BookingService() {
   )
 }
 
-export default BookingService
+export default BookingLayout

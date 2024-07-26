@@ -9,7 +9,7 @@ import Auth from "./Components/Sign_Log/Auth"
 import Login from "./Components/Sign_Log/Login"
 import Signup from "./Components/Sign_Log/Signup"
 // import "./server"
-import BookingService from "./Components/DoctorBooking/BookingService"
+import BookingLayout from "./Components/DoctorBooking/BookingLayout"
 import FindDoctor from "./Components/DoctorBooking/FindDoctor"
 
 
@@ -30,7 +30,7 @@ function App() {
           <Route path="/login" element={<Login/>} />
           <Route path="/signup" element={<Signup/>} />
 
-          <Route path="/doctor-booking" element={<BookingService/>}>
+          <Route path="/doctor-booking" element={<BookingLayout/>}>
             <Route index element={<FindDoctor/>}/>
           </Route>
         </Route>

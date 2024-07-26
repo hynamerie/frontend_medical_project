@@ -1,14 +1,18 @@
 .card-container {
   border: 2px solid black;
   border-radius: 8px;
+  overflow: hidden;
+
+}
+
+.card-detail-container {
   width: 250px;
   padding: 20px 0 0 0;
-  overflow: hidden;
 }
 .card-img {
   text-align: center;
   font-size: 80px;
-  color: #007250;
+  color: #2190FF;
   margin-bottom: 10px;
 }
 .card-details {
@@ -33,14 +37,15 @@
   font-weight: bold;
 }
 .book-btn {
-  background-color: #3498db;
+  background-color: #2190FF;
   border: none;
   width: 100%;
   font-size: 16px;
   cursor: pointer;
+  padding: 10px;
 }
 .book-btn:hover {
-  background-color: red;
+  background-color: rgb(0, 122, 31);
 }
 .book-btn button {
   background: none;
@@ -61,12 +66,12 @@
   text-align: center; */
   display: grid;
   grid-template-columns: 0.8fr 1fr 0.8fr;
-  row-gap: 12px;
   overflow: scroll;
 }
 .popup-container .close {
   width: 50px;
   height: 50px;
+  justify-self: end;
 }
 .popup-card {
   grid-column: 2 / 3;
@@ -76,5 +81,5 @@
   flex-direction: column;
 }
 .popup-card .card-img {
-  margin-top: 80px;
+  margin-top: 5vh;
 }

@@ -1,11 +1,12 @@
 import React from 'react';
 import './DoctorCard.css';
 import Popup from 'reactjs-popup';
+import BookingForm from './BookingForm';
 
 const DoctorCard = ({ name, speciality, experience, ratings }) => {
   return (
-    <div>
-      <div className="card-container">
+    <div className='card-container'>
+      <div className="card-detail-container">
         <div className="card-img">
           <i className="fa fa-user-md" aria-hidden="true"></i>        
         </div>
@@ -27,9 +28,6 @@ const DoctorCard = ({ name, speciality, experience, ratings }) => {
         }>
           {close => (
             <div className='popup-container'>
-              <button className="close" onClick={close}>
-                &times;
-              </button>
               <div className="popup-card">
                 <div className='card-img'>
                 <i className="fa fa-user-md" aria-hidden="true"></i>        
@@ -40,7 +38,15 @@ const DoctorCard = ({ name, speciality, experience, ratings }) => {
                   <div className="detail-experience">{experience} years experience</div>
                   <div className="detail-rating">Ratings: {ratings}</div>
                 </div>
+
+                <BookingForm/>
+
               </div>
+              
+              <button className="close" onClick={close}>
+                &times;
+              </button>
+
             </div>
           )}
         </Popup>
