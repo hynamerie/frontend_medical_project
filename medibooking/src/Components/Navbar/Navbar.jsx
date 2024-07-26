@@ -3,9 +3,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
+  const token = sessionStorage.getItem("loggedin");
+  // if (!token) {
+  //   window.location.reload();
+  // }
 
   function logOut() {
     sessionStorage.removeItem("loggedin");
+    window.location.reload();
   }
 
   return (
@@ -36,30 +41,35 @@ function Navbar() {
             <Link to="/review">Review</Link>
           </li>
         </ul>
-        <ul>
-          <li className=" link dropdown-pf" id="profile">
-            <Link to="/profile" className="dropbtn">Profile</Link>
-            <ul className="dropdown-pf-menu" id="dropdown-pf">
-              <li>
-                <a href="#">Reports</a>
-              </li>
-              <li>
-                <a href="#">Settings</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <div className="btn-log">
+        {token ? (
+          <>
+          <ul>
+            <li className=" link dropdown-pf" id="profile">
+              <Link to="/profile" className="dropbtn">Profile</Link>
+              <ul className="dropdown-pf-menu" id="dropdown-pf">
+                <li>
+                  <a href="#">Reports</a>
+                </li>
+                <li>
+                  <a href="#">Settings</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <button onClick={logOut}>
+            <Link to="/">Log out</Link>  
+          </button>
+          </>
+        ) : (
+          <>
           <button>
             <Link to="./signup">Sign Up</Link>
           </button>
           <button>
             <Link to="./login">Login</Link>
           </button>
-          <button onClick={logOut}>
-            <Link to="/">Log out</Link>  
-          </button>
-        </div>
+          </>
+        )}
       </nav>
     </div>
   );

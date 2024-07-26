@@ -20,9 +20,10 @@ const Login = () => {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(loginData);
-    console.log(user)
+    console.log(user);
     sessionStorage.setItem("loggedin", true);
-    navigate("/profile", {replace: true})
+    navigate("/", {replace: true});
+    window.location.reload();
 
     // logUser(loginData).then(data => {
     //   console.log(data);
