@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   const token = sessionStorage.getItem("loggedin");
-  // if (!token) {
-  //   window.location.reload();
-  // }
 
   function logOut() {
     sessionStorage.removeItem("loggedin");
@@ -28,15 +25,15 @@ function Navbar() {
       </label> 
       <nav className="navbar">
         <ul>
-          {/* <li className="link">
+          <li className="link">
             <a href="#">Home</a>
-          </li> */}
+          </li>
           <li className="link">
             <Link to="/booking">Appointments</Link>
           </li>
-          {/* <li className="link">
+          <li className="link">
             <a href="#">Health Blog</a>
-          </li> */}
+          </li>
           <li className="link">
             <Link to="/review">Review</Link>
           </li>
