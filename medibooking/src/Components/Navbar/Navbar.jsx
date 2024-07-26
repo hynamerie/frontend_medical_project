@@ -26,13 +26,10 @@ function Navbar() {
       <nav className="navbar">
         <ul>
           <li className="link">
-            <a href="#">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li className="link">
-            <Link to="/booking">Appointments</Link>
-          </li>
-          <li className="link">
-            <a href="#">Health Blog</a>
+            <Link to="/appointments">Appointments</Link>
           </li>
           <li className="link">
             <Link to="/review">Review</Link>

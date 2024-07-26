@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './signup.css'
 
 import { Link } from 'react-router-dom';
@@ -9,10 +10,14 @@ const Sign_Up = () => {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     function handleSubmit(e) {
       e.preventDefault();
       console.log("Name: " + name, "---Email: " + email, "---Phone: " + phone, password);
+      sessionStorage.setItem("loggedin", true);
+      navigate("/", {replace: true});
+      window.location.reload();
     }
 
     return (
