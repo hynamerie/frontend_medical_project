@@ -27,21 +27,21 @@ function BookingService() {
     })
     .catch(err => console.log(err));
   }
-  const handleSearch = (searchText) => {
-    if (searchText === '') {
-      setFilteredDoctors([]);
-      setIsSearched(false);
-      } else {          
-      const filtered = doctors.filter(
-          (doctor) => doctor.speciality.toLowerCase().includes(searchText.toLowerCase())
-      );
-      setFilteredDoctors(filtered);
-      setIsSearched(true);
-      // window.location.reload()
-    }
-  };
+  // const handleSearch = (searchText) => {
+  //   if (searchText === '') {
+  //     setFilteredDoctors([]);
+  //     setIsSearched(false);
+  //     } else {          
+  //     const filtered = doctors.filter(
+  //         (doctor) => doctor.speciality.toLowerCase().includes(searchText.toLowerCase())
+  //     );
+  //     setFilteredDoctors(filtered);
+  //     setIsSearched(true);
+  //     // window.location.reload()
+  //   }
+  // };
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   useEffect(() => {
       getDoctorsDetails();
       // const authtoken = sessionStorage.getItem("auth-token");
