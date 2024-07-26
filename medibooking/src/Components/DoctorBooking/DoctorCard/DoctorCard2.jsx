@@ -7,27 +7,27 @@ import './DoctorCard.css';
 
 
 const DoctorCard = ({ name, speciality, experience, ratings }) => {
-  // const [showModal, setShowModal] = useState(false);
-  // const [appointments, setAppointments] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const [appointments, setAppointments] = useState([]);
 
-  // const handleBooking = () => {
-  //   setShowModal(true);
-  // };
+  const handleBooking = () => {
+    setShowModal(true);
+  };
 
-  // const handleCancel = (appointmentId) => {
-  //   const updatedAppointments = appointments.filter((appointment) => appointment.id !== appointmentId);
-  //   setAppointments(updatedAppointments);
-  // };
+  const handleCancel = (appointmentId) => {
+    const updatedAppointments = appointments.filter((appointment) => appointment.id !== appointmentId);
+    setAppointments(updatedAppointments);
+  };
 
-  // const handleFormSubmit = (appointmentData) => {
-  //   const newAppointment = {
-  //     id: uuidv4(),
-  //     ...appointmentData,
-  //   };
-  //   const updatedAppointments = [...appointments, newAppointment];
-  //   setAppointments(updatedAppointments);
-  //   setShowModal(false);
-  // };
+  const handleFormSubmit = (appointmentData) => {
+    const newAppointment = {
+      id: uuidv4(),
+      ...appointmentData,
+    };
+    const updatedAppointments = [...appointments, newAppointment];
+    setAppointments(updatedAppointments);
+    setShowModal(false);
+  };
 
   return (
     <div className="doctor-card-container">
@@ -82,7 +82,7 @@ const DoctorCard = ({ name, speciality, experience, ratings }) => {
                 </div>
               </div>
 
-              {/* {appointments.length > 0 ? (
+              {appointments.length > 0 ? (
                 <>
                   <h3 style={{ textAlign: 'center' }}>Appointment Booked!</h3>
                   {appointments.map((appointment) => (
@@ -95,7 +95,7 @@ const DoctorCard = ({ name, speciality, experience, ratings }) => {
                 </>
               ) : (
                 <AppointmentFormIC doctorName={name} doctorSpeciality={speciality} onSubmit={handleFormSubmit} />
-              )} */}
+              )}
             </div>
           )}
         {/* </Popup>  */}

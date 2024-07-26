@@ -16,7 +16,7 @@
 
 .sign-form {
   display: grid;
-  grid-template-columns: 10vh auto 10vh;
+  grid-template-columns: 10vw auto 10vw;
   row-gap: 12px;
   justify-content: center;
   margin-top: 30px;
