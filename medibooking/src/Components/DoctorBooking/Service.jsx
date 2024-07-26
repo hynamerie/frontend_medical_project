@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './DoctorService.css';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import FindDoctor from './FindDoctor/FindDoctor';
+import FindDoctor from './FindDoctor';
 import DoctorCard from './DoctorCard/DoctorCard';
 
 const Booking = () => {

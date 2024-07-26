@@ -10,7 +10,7 @@ import Login from "./Components/Sign_Log/Login"
 import Signup from "./Components/Sign_Log/Signup"
 // import "./server"
 import BookingService from "./Components/DoctorBooking/BookingService"
-import FindDoctor from "./Components/DoctorBooking/FindDoctor/FindDoctor"
+import FindDoctor from "./Components/DoctorBooking/FindDoctor"
 
 
 function App() {

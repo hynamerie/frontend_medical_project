@@ -1,0 +1,79 @@
+/* BookingService.css */
+h2 {
+  margin-top: 5vh;
+}
+.result-layout{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* './FindDoctor.css'; */
+.find-doctor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+}
+.find-doctor img {
+  height: 40vh;
+}
+.search-container {
+  width: 500px;
+  height: auto;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  cursor: pointer;
+  padding: 0 20px 0 0;
+}
+.search-input {
+  padding: 14px 20px;
+  width: 100%;
+  font-size: medium;
+  border: 0px;
+  cursor: pointer;
+}
+.search-input:focus {
+  outline: none;
+}
+.search-icon {
+  font-size: 1.5rem;
+}
+.search-result {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border: 1px solid #555;
+}
+.search-result .search-icon {
+  color: #b4b4b4;
+}
+.search-result-item {
+  height: 60px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 20px;
+  cursor: pointer;
+  text-align: left;
+}
+.search-result-item:hover {
+  background-color: #f0f0f5;
+}
+
+@media screen and (max-width: 600px) {
+  .find-doctor img {
+      height: auto;
+      width: 90vw;
+  }
+}
+

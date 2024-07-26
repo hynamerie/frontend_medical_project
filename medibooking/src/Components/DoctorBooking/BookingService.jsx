@@ -1,7 +1,9 @@
 import React from 'react'
-import FindDoctor from './FindDoctor/FindDoctor'
+import FindDoctor from './FindDoctor'
+import DoctorCard from './DoctorCard/DoctorCard';
 import { useState, useEffect } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom'
+import "./Booking.css"
 
 function BookingService() {
   const [searchParams] = useSearchParams();
@@ -66,6 +68,12 @@ function BookingService() {
         ''
         )}
       </div>
+      <div className="result-layout" >
+        {filteredDoctors.map(doctor => 
+          <DoctorCard {...doctor} key={doctor.name} />
+        )}
+      </div>
+
     </section>
   )
 }

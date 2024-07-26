@@ -50,18 +50,12 @@ function Navbar() {
               </ul>
             </li>
           </ul>
-          <button onClick={logOut}>
-            <Link to="/">Log out</Link>  
-          </button>
+          <Link to="/"><button onClick={logOut}>Log out</button></Link>  
           </>
         ) : (
           <>
-          <button>
-            <Link to="./signup">Sign Up</Link>
-          </button>
-          <button>
-            <Link to="./login">Login</Link>
-          </button>
+          <Link to="./signup"><button>Sign Up</button></Link>
+          <Link to="./login"><button>Log In</button></Link>
           </>
         )}
       </nav>
