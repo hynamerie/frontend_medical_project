@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Navbar() {
 
   function logOut() {
-    localStorage.removeItem("loggedin");
+    sessionStorage.removeItem("loggedin");
   }
 
   return (

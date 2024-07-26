@@ -21,7 +21,7 @@ const Login = () => {
     e.preventDefault();
     console.log(loginData);
     console.log(user)
-    localStorage.setItem("loggedin", true);
+    sessionStorage.setItem("loggedin", true);
     navigate("/profile", {replace: true})
 
     // logUser(loginData).then(data => {
