@@ -23,6 +23,7 @@ button {
   font-size: 18px;
 }
 h2 {
+  margin-top: 10vh;
   font-size: 36px;
 }
 @media screen and (max-width: 600px) {

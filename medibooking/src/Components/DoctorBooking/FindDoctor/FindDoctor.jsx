@@ -21,9 +21,6 @@ const FindDoctor = () => {
   return (
     <section className='find-doctor'>
       <div>
-        <h2>Find doctor at your own ease</h2>
-      </div>
-      <div>
         <img src={imgUrl} hidden={!resultHidden || search}/>
       </div>
       <div className='search-container'>

@@ -52,6 +52,7 @@ function BookingService() {
 
   return (
     <section>
+      <h2>Find doctor at your own ease</h2>
       <FindDoctor/>
       <div>
         {isSearched ? (
