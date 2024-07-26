@@ -45,12 +45,20 @@
   padding: 10px;
 }
 .book-btn:hover {
-  background-color: rgb(0, 122, 31);
+  background-color: rgb(73, 0, 122);
 }
 .book-btn button {
   background: none;
   border: 0;
   color: #fff;
+}
+.cancel-btn {
+  background-color: red;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
 }
 
 /* POPUP */

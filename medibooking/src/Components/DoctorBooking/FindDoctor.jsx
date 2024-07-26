@@ -6,6 +6,7 @@ import imgUrl from "../../assets/bro2.png"
 const initSpeciality = [
   'Dentist', 'General Physician', 'Dermatologist', 'Gynecologist/obstetrician', 'Cardiology/cardiologist ', 'Dermatology/dermatologist'
 ]
+
 const FindDoctor = () => {
   const [resultHidden, setResultHidden] = useState(true);
   const [search, setSearch] = useState('');
