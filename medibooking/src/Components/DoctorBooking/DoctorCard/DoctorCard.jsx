@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './DoctorCard.css';
 import Popup from 'reactjs-popup';
 import { v4 as uuidv4 } from 'uuid';
+import { useNavigate } from 'react-router-dom';
 
 const DoctorCard = ({name, speciality, experience, ratings}) => {
   
@@ -9,6 +10,8 @@ const DoctorCard = ({name, speciality, experience, ratings}) => {
 
   const [bookingData, setBookingData] = useState({namePatient: "", phonePatient: "", date: "", timeslot: ""})
   
+  const navigate = useNavigate();
+
   function handleChange(e) {
     const {name, value} = e.target;
     setBookingData(prev => (
@@ -25,10 +28,12 @@ const DoctorCard = ({name, speciality, experience, ratings}) => {
     };
     const updatedAppointments = [...appointments, newAppointment];
     setAppointments(updatedAppointments);
+    console.log("Booking ID: "+ newAppointment.id)
+    // navigate("/");
   };
 
   const handleCancel = (appointmentId) => {
-    const updatedAppointments = appointments.filter((appointment) => appointment.id !== appointmentId);
+    const updatedAppointments = appointments.filter((booking) => booking.id !== appointmentId);
     setAppointments(updatedAppointments);
   };
 
