@@ -41,12 +41,12 @@
 }
 .navbar button {
   width: 100px;
-  padding: 5px;
+  padding: 6px;
   font-weight: 400;
   border-radius: 16px;
-  background-color: rgba(0,0,0,0.1);
-  border: 2px solid #5113D6;
-  color: #444;
+  background-color:#3413D8;
+  border: 0px;
+  color: #fff;
 }
 .navbar button:hover {
   scale: 1.05;

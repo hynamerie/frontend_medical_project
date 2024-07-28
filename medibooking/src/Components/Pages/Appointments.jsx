@@ -1,7 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { Outlet } from 'react-router-dom'
 
 export default function Appointments() {
   return (
-    <div>Appointments</div>
+    <>
+    <Outlet/>
+    </>
   )
 }

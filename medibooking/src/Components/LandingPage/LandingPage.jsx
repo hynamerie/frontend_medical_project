@@ -22,7 +22,7 @@ function Landing_Page() {
         <h4>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque at quae ducimus. Suscipit omnis quibusdam non cum rem voluptatem! 
         </h4>
-        <Link to="/doctor-booking">
+        <Link to="/services">
           <button className="button">Get Started</button>
         </Link>              
       </div>

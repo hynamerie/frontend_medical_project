@@ -57,7 +57,7 @@ const DoctorCard = ({name, speciality, experience, ratings}) => {
   return (
     <div className='card-container'>
 
-      {/* DOCTOR SEARCHED CARDS */}
+{/* DOCTOR SEARCHED CARDS */}
       <div className="card-detail-container">
         <div className="card-img">
           <i className="fa fa-user-md" aria-hidden="true"></i>        
@@ -70,7 +70,7 @@ const DoctorCard = ({name, speciality, experience, ratings}) => {
         </div>
       </div>
 
-      {/* BOOKING BUTTON */}
+{/* BOOKING BUTTON */}
       <div >
         <Popup trigger={
           <div className={`book-btn ${appointments.length > 0 ? 'cancel-btn' : ''}`}>
@@ -102,13 +102,13 @@ const DoctorCard = ({name, speciality, experience, ratings}) => {
                 {appointments.length > 0 ? (
   // APPOINTMENT DETAILS
                   <div>
-                    <h3 style={{ textAlign: 'center', margin: "20px" }}>Appointment Booked!</h3>
+                    <h3>Appointment Booked!</h3>
                     {appointments.map((appointment) => (
                       <div className="card-details" key={appointment.id}>
-                        <p>Name: {appointment.namePatient}</p>
-                        <p>Phone Number: {appointment.phonePatient}</p>
-                        <p>Date: {appointment.date}</p>
-                        <p>Time: {appointment.timeslot}</p>
+                        <p><strong>Name: </strong> {appointment.namePatient}</p>
+                        <p><strong>Phone number: </strong> {appointment.phonePatient}</p>
+                        <p><strong>Date of appointment: </strong>{appointment.date}</p>
+                        <p><strong>Time slot: </strong>{appointment.timeslot}</p>
                         <div className="btn-group" >
                         <button className='btn-danger' style={{width: "200px"}}
                           onClick={() => handleCancel(appointment.id)}

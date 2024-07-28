@@ -10,8 +10,8 @@ import Login from "./Components/Sign_Log/Login"
 import Signup from "./Components/Sign_Log/Signup"
 // import "./server"
 import BookingLayout from "./Components/DoctorBooking/BookingLayout"
-import FindDoctor from "./Components/DoctorBooking/FindDoctor"
 import Notification from "./Components/Notification"
+import Services from "./Components/Pages/Services"
 
 function App() {
 
@@ -21,7 +21,10 @@ function App() {
         <Routes>
           <Route element={<Layout/>}>
             <Route path="/" element={<Landing_Page/>} />
-            <Route path="/appointments" element={<Appointments/>} />
+            <Route path="/services" element={<Services/>}/>
+            <Route path="/doctor-booking" element={<Appointments/>}>
+              <Route index element={<BookingLayout/>}/>
+            </Route>
             <Route path="/review" element={<Review/>} />
             
             <Route element={<Auth/>}>
@@ -31,9 +34,6 @@ function App() {
             <Route path="/login" element={<Login/>} />
             <Route path="/signup" element={<Signup/>} />
 
-            <Route path="/doctor-booking" element={<BookingLayout/>}>
-              <Route index element={<FindDoctor/>}/>
-            </Route>
           </Route>
         </Routes>
       </Notification>
