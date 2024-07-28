@@ -7,8 +7,8 @@ function Header({children}) {
   const [showNavbar, setShowNavbar] = useState(false);
   
   useEffect(() => {
-    console.log(location);
-    if (location.pathname === "/login" || location.pathname === "/signup") {
+    // console.log(location);
+    if (location.pathname === "/signup") {
       setShowNavbar(false);
     } else {
       setShowNavbar(true);

@@ -43,7 +43,7 @@ function BookingLayout() {
   //   }
   // };
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   
   useEffect(() => {
       getDoctorsDetails();

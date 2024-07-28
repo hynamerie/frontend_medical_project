@@ -6,10 +6,10 @@ import { useNavigate } from 'react-router-dom';
 
 const DoctorCard = ({name, speciality, experience, ratings}) => {
   
-  const [appointments, setAppointments] = useState([]);
 
   const [bookingData, setBookingData] = useState({namePatient: "", phonePatient: "", date: "", timeslot: ""})
-  
+  const [appointments, setAppointments] = useState([]);
+
   const navigate = useNavigate();
 
   function handleChange(e) {
@@ -22,19 +22,34 @@ const DoctorCard = ({name, speciality, experience, ratings}) => {
   function handleFormSubmit(e) {
     e.preventDefault();
     console.log("Doctor: " + name, "| specialty: " + speciality, bookingData);
+    
     const newAppointment = {
       id: uuidv4(),
       ...bookingData,
     };
     const updatedAppointments = [...appointments, newAppointment];
     setAppointments(updatedAppointments);
+
     console.log("Booking ID: "+ newAppointment.id)
-    // navigate("/");
+    
+    const appointmentData = {
+      name: newAppointment.namePatient,
+      phone: newAppointment.phonePatient,
+      date: newAppointment.date,
+      time: newAppointment.timeslot
+    }
+    localStorage.setItem("booking", JSON.stringify(appointmentData));
+
+    const doctorData = [name, speciality];
+    localStorage.setItem("doctorData", JSON.stringify(doctorData));
+    // navigate("./");
   };
 
   const handleCancel = (appointmentId) => {
     const updatedAppointments = appointments.filter((booking) => booking.id !== appointmentId);
     setAppointments(updatedAppointments);
+
+    localStorage.clear();
   };
 
   return (
@@ -136,10 +151,10 @@ const DoctorCard = ({name, speciality, experience, ratings}) => {
                         value={bookingData.timeslot} onChange={handleChange}
                       >
                         <option>Select a time slot</option>
-                        <option value="9am">9:00 AM</option>
-                        <option value="10am">10:00 AM</option>
-                        <option value="2pm">2:00 PM</option>
-                        <option value="3pm">3:00 PM</option>
+                        <option value="9 AM">9:00 AM</option>
+                        <option value="10 AM">10:00 AM</option>
+                        <option value="2 PM">2:00 PM</option>
+                        <option value="3 PM">3:00 PM</option>
                       </select>
                       <div className="select-icon">
                         <i className="fa fa-chevron-down" aria-hidden="true"></i>
