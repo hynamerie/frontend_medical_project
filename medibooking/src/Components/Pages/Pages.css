@@ -31,3 +31,63 @@
   justify-self: start;
   font-weight: 600;
 }
+
+/* REVIEW + REPORTS*/
+.review-layout {
+  margin: 0 5vw;
+}
+.table-rv {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+}
+.table-rv tr {
+  border-bottom: 1px solid;
+}
+.table-head {
+  background-color: #3413D8;
+  color: #fff;
+  text-align: center;
+}
+.table-head th, td {
+  padding: 10px;
+}
+.table-body .tb-info {
+  text-align: left;
+  font-style: italic;
+  font-weight: 300;
+}
+.table-rv button {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 0px;
+}
+.table-body td:nth-child(1) {
+  width: 8%;
+  text-align: center;
+}
+.table-body td:nth-child(4) {
+  width: 15%;
+  text-align: center;
+}
+.table-body td:nth-child(5) {
+  width: 40%;
+  text-align: left;
+  font-style: italic;
+  font-weight: 300;
+}
+.form-group textarea {
+  width: 250px;
+  height: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: none;
+}
+
+#reports td:nth-child(4), #reports td:nth-child(5) {
+  width: 25%;
+  text-align: center;
+}

@@ -33,21 +33,18 @@ function Navbar() {
             <Link to="/doctor-booking">Appointments</Link>
           </li>
           <li className="link">
-            <Link to="/review">Review</Link>
+            <Link to="/blog">Health Blog</Link>
           </li>
         </ul>
         {token ? (
           <>
           <ul>
             <li className=" link dropdown-pf" id="profile">
-              <Link to="/profile" className="dropbtn">Profile</Link>
+              Profile
               <ul className="dropdown-pf-menu" id="dropdown-pf">
-                <li>
-                  <a href="#">Reports</a>
-                </li>
-                <li>
-                  <a href="#">Settings</a>
-                </li>
+                <li><a href="/review">Review</a></li>
+                <li><a href="/reports">Reports</a></li>
+                <li><a href="/settings">Settings</a></li>
               </ul>
             </li>
           </ul>

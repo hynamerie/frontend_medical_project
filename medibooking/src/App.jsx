@@ -3,8 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Layout from "./Components/Layout"
 import Landing_Page from "./Components/LandingPage/LandingPage"
 import Appointments from "./Components/Pages/Appointments"
-import Review from "./Components/Pages/Review"
-import Profile from "./Components/Pages/Profile"
 import Auth from "./Components/Sign_Log/Auth"
 import Login from "./Components/Sign_Log/Login"
 import Signup from "./Components/Sign_Log/Signup"
@@ -12,6 +10,8 @@ import Signup from "./Components/Sign_Log/Signup"
 import BookingLayout from "./Components/DoctorBooking/BookingLayout"
 import Notification from "./Components/Notification"
 import Services from "./Components/Pages/Services"
+import Review from "./Components/Pages/Review"
+import Reports from "./Components/Pages/Reports"
 
 function App() {
 
@@ -25,10 +25,10 @@ function App() {
             <Route path="/doctor-booking" element={<Appointments/>}>
               <Route index element={<BookingLayout/>}/>
             </Route>
-            <Route path="/review" element={<Review/>} />
             
             <Route element={<Auth/>}>
-              <Route path="/profile" element={<Profile />} />
+              <Route path="/review" element={<Review/>} />
+              <Route path="/reports" element={<Reports/>}/>
             </Route>
 
             <Route path="/login" element={<Login/>} />
