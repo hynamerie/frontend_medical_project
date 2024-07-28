@@ -20,7 +20,9 @@ const Reports = () => {
             <td>Dr. Loria Musset</td>
             <td>Dentist</td>
             <td>
+              <a href="https://iris.who.int/bitstream/handle/10665/349091/WHO-EURO-2021-2661-42417-58838-eng.pdf" target="_blank">
               <button className='btn-primary'>View Report</button>
+              </a>
             </td>
             <td>
               <button className='btn-primary'>Download</button>
@@ -31,7 +33,9 @@ const Reports = () => {
             <td>Dr. Gregory Schneider</td>
             <td>Neurosurgery</td>
             <td>
-              <button className='btn-primary'>View Report</button>
+              <a href="https://iris.who.int/bitstream/handle/10665/349091/WHO-EURO-2021-2661-42417-58838-eng.pdf" target="_blank">
+                <button className='btn-primary'>View Report</button>
+                </a>
             </td>
             <td>
               <button className='btn-primary'>Download</button>

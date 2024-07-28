@@ -5,7 +5,9 @@
 .service-layout {
   margin: 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .service-card-container {
   display: grid;
@@ -37,6 +39,7 @@
   margin: 0 5vw;
 }
 .table-rv {
+  margin-top: 20px;
   border-collapse: collapse;
   width: 100%;
   text-align: left;
@@ -90,4 +93,24 @@
 #reports td:nth-child(4), #reports td:nth-child(5) {
   width: 25%;
   text-align: center;
+}
+
+/* SETTINGS */
+.edit-table {
+  margin-top: 20px;  
+}
+.edit-label {
+  font-weight: bold;
+  text-align: left;
+}
+.edit-input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.edit-btn {
+  padding: 8px;
+  border-radius: 8px;
+  border: 0;
 }

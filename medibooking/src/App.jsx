@@ -12,6 +12,7 @@ import Notification from "./Components/Notification"
 import Services from "./Components/Pages/Services"
 import Review from "./Components/Pages/Review"
 import Reports from "./Components/Pages/Reports"
+import Settings from "./Components/Pages/Settings"
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
             <Route element={<Auth/>}>
               <Route path="/review" element={<Review/>} />
               <Route path="/reports" element={<Reports/>}/>
+              <Route path="settings" element={<Settings/>}/>
             </Route>
 
             <Route path="/login" element={<Login/>} />
