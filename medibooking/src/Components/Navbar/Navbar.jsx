@@ -7,6 +7,7 @@ function Navbar() {
 
   function logOut() {
     sessionStorage.removeItem("loggedin");
+    localStorage.clear();
     window.location.reload();
   }
 
