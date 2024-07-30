@@ -5,7 +5,7 @@
   align-items: center;
   height: 10vh;
   width: 100%;
-  padding: 0 3rem;
+  padding: 0;
 }
 
 /* LOGO -------------------------------------------------- */
@@ -103,7 +103,7 @@
 
 /* Responsive ----------------------------------------------------- */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 900px) {
   .header {
     padding: 1.3rem 5%;
   }
@@ -147,7 +147,10 @@
     margin-top: 10px;
   }
   .dropdown-pf:hover #dropdown-pf {
-    display: none;
+    position: relative;
+  }
+  #dropdown-pf li {
+    padding: 0;
   }
   
 }

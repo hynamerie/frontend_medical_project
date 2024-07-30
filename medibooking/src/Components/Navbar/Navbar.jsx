@@ -1,6 +1,7 @@
 import "./navBar.css";
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useState } from "react";
 
 function Navbar() {
   const token = sessionStorage.getItem("loggedin");
@@ -12,6 +13,11 @@ function Navbar() {
     window.location.reload();
   }
 
+  const [isChecked, setIsChecked] = useState(false);
+  const checkHandler = () => {
+    setIsChecked(!isChecked)
+  }
+
   return (
     <div className="header">
       <div className="logo" id="logo">
@@ -20,7 +26,7 @@ function Navbar() {
           <i className="fa fa-user-md" aria-hidden="true"></i>
         </a>
       </div>
-      <input type="checkbox" id="check"/>
+      <input type="checkbox" id="check" checked={isChecked} onChange={checkHandler}/>
       <label htmlFor="check" className="side_menu">
         <i className="fa fa-times fa fa-bars" id="menu-icon"></i>
         <i className="fa fa-times" aria-hidden="true" id="close-icon"></i>
@@ -28,13 +34,13 @@ function Navbar() {
       <nav className="navbar">
         <ul>
           <li className="link">
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={checkHandler}>Home</Link>
           </li>
           <li className="link">
-            <Link to="/doctor-booking">Appointments</Link>
+            <Link to="/doctor-booking" onClick={checkHandler}>Appointments</Link>
           </li>
           <li className="link">
-            <Link to="/blog">Health Blog</Link>
+            <Link to="/blog" onClick={checkHandler}>Health Blog</Link>
           </li>
         </ul>
         {token ? (
@@ -53,8 +59,8 @@ function Navbar() {
           </>
         ) : (
           <>
-          <Link to="./signup"><button>Sign Up</button></Link>
-          <Link to="./login"><button>Log In</button></Link>
+          <Link to="./signup" ><button>Sign Up</button></Link>
+          <Link to="./login" onClick={checkHandler}><button>Log In</button></Link>
           </>
         )}
       </nav>
