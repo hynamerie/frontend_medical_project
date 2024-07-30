@@ -16,6 +16,9 @@ const Sign_Up = () => {
       e.preventDefault();
       console.log("Name: " + name, "---Email: " + email, "---Phone: " + phone, password);
       sessionStorage.setItem("loggedin", true);
+      sessionStorage.setItem("user", name);
+      sessionStorage.setItem("email", email);
+      sessionStorage.setItem("pwd", password);
       navigate("/", {replace: true});
       window.location.reload();
     }
@@ -59,7 +62,7 @@ const Sign_Up = () => {
         <div className="form-group">
           <label htmlFor="phone">Phone</label>
           <input type="tel" name="phone" id="phone" 
-            required pattern='[0-9]{10}' title='must include 10 numbers'
+            // pattern='[0-9]{10}' title='must include 10 numbers'
             className="form-control" placeholder="Enter your phone number"
             value={phone} onChange={(e)=>setPhone(e.target.value)}
             />

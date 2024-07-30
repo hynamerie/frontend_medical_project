@@ -6,7 +6,8 @@ function Navbar() {
   const token = sessionStorage.getItem("loggedin");
 
   function logOut() {
-    sessionStorage.removeItem("loggedin");
+    // sessionStorage.removeItem("loggedin");
+    sessionStorage.clear();
     localStorage.clear();
     window.location.reload();
   }

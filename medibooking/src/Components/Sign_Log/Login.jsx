@@ -22,6 +22,8 @@ const Login = () => {
     console.log(loginData);
     console.log(user);
     sessionStorage.setItem("loggedin", true);
+    sessionStorage.setItem("email", loginData.email);
+    sessionStorage.setItem("pwd", loginData.password);
     navigate("/", {replace: true});
     window.location.reload();
 
