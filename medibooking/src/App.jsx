@@ -13,6 +13,7 @@ import Services from "./Components/Pages/Services"
 import Review from "./Components/Pages/Review"
 import Reports from "./Components/Pages/Reports"
 import Settings from "./Components/Pages/Settings"
+import Blog from "./Components/Pages/Blog"
 
 function App() {
 
@@ -23,6 +24,8 @@ function App() {
           <Route element={<Layout/>}>
             <Route path="/" element={<Landing_Page/>} />
             <Route path="/services" element={<Services/>}/>
+            <Route path="/blog" element={<Blog/>}/>
+            
             <Route path="/doctor-booking" element={<Appointments/>}>
               <Route index element={<BookingLayout/>}/>
             </Route>

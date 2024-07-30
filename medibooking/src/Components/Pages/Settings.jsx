@@ -41,14 +41,14 @@ const Settings = () => {
           <td className='edit-label'>Name</td>
           <td>
           {editMode !== 1 ? (
-            <div>
+            <div className='edit-form'>
               <input type="text" name='name' className='edit-input' value={userDetails.nameUs} disabled/>
               <span> </span>
               <button className='btn-primary edit-btn' onClick={() => handleEdit(1)}>Edit</button>
             </div>
           ) : (
-            <form id='form1' onSubmit={handleSubmit}>
-              <input type="text" name='name' className='edit-input' onChange={handleInputChange}/>
+            <form className='edit-form' onSubmit={handleSubmit}>
+              <input type="text" name='name' className='edit-input' defaultValue={userDetails.nameUs} onChange={handleInputChange}/>
               <span> </span>
               <button className='btn-primary edit-btn' >Save</button>
           </form>
@@ -59,14 +59,14 @@ const Settings = () => {
           <td className='edit-label'>Email</td>
           <td>
           {editMode !== 2 ? (
-            <div>
+            <div className='edit-form'>
               <input type="email" name='email' className='edit-input' value={userDetails.email} disabled/>
               <span> </span>
               <button className='btn-primary edit-btn' onClick={() => handleEdit(2)}>Edit</button>
             </div>
           ) : (
-            <form id='form2' onSubmit={handleSubmit}>
-              <input type="email" name='email' className='edit-input' onChange={handleInputChange}/>
+            <form className='edit-form' onSubmit={handleSubmit}>
+              <input type="email" name='email' className='edit-input' defaultValue={userDetails.email} onChange={handleInputChange}/>
               <span> </span>
               <button className='btn-primary edit-btn' >Save</button>
           </form>
@@ -77,13 +77,13 @@ const Settings = () => {
           <td className='edit-label'>Password</td>
           <td>
           {editMode !== 3 ? (
-            <div>
+            <div className='edit-form'>
               <input type="password" name='pwd' className='edit-input' value={userDetails.pwd} disabled/>
               <span> </span>
               <button className='btn-primary edit-btn' onClick={() => handleEdit(3)}>Edit</button>
             </div>
           ) : (
-            <form id='form3' onSubmit={handleSubmit}>
+            <form className='edit-form' onSubmit={handleSubmit}>
               <input type="password" name='pwd' className='edit-input' onChange={handleInputChange}/>
               <span> </span>
               <button className='btn-primary edit-btn' >Save</button>

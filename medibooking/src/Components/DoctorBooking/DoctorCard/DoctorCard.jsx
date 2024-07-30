@@ -32,6 +32,7 @@ const DoctorCard = ({name, speciality, experience, ratings}) => {
 
     console.log("Booking ID: "+ newAppointment.id)
     
+    //Set data storages for Notifications
     const appointmentData = {
       name: newAppointment.namePatient,
       phone: newAppointment.phonePatient,
