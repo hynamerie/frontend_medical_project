@@ -20,7 +20,7 @@ function Landing_Page() {
             <div className="blue1 blob"></div>
         </div>
         <h4>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque at quae ducimus. Suscipit omnis quibusdam non cum rem voluptatem! 
+        Lorem ipsum dolor sit amet consectetur. Eget vestibulum convallis ut lacus curabitur fusce. Tempus nulla commodo eget non leo in viverra. Sed mi id vestibulum arcu. Nulla accumsan porttitor penatibus pellentesque lacus scelerisque amet gravida pretium. 
         </h4>
         <Link to="/services">
           <button className="button">Get Started</button>
