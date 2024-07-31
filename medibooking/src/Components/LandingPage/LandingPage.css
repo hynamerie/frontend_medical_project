@@ -18,7 +18,7 @@
     font-weight: 900;
 }
 .text-gradient {
-    background: linear-gradient(45deg,#2190FF 2.34%,#b673f8 100.78%);
+    background: linear-gradient(45deg,#3413D8 2.34%,#b673f8 100.78%);
     /* -webkit-background-clip: text; */
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -33,7 +33,7 @@
 /* BUTTON */
 .hero-section .button {
     /* padding: 0.7rem 2rem; */
-    background-color: #2190FF;
+    background-color: #3413D8;
     border: 1px solid transparent;
     color: #fff;
     padding: 1em;
