@@ -18,7 +18,7 @@ import Blog from "./Components/Pages/Blog"
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={"/frontend_medical_project/"}>
       <Notification>
         <Routes>
           <Route element={<Layout/>}>
