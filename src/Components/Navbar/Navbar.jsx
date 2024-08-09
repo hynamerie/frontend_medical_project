@@ -34,7 +34,8 @@ function Navbar() {
       <nav className="navbar">
         <ul>
           <li className="link">
-            <Link to="/" onClick={checkHandler}>Home</Link>
+            <a href="/" onClick={checkHandler}>Home</a> 
+            {/* INCLUDE "A" TAG TO SHOW NOTIFICATIONS????? */}
           </li>
           <li className="link">
             <Link to="/doctor-booking" onClick={checkHandler}>Appointments</Link>
