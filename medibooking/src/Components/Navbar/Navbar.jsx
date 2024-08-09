@@ -21,10 +21,10 @@ function Navbar() {
   return (
     <div className="header">
       <div className="logo" id="logo">
-        <a href="/">
+        <Link to="/">
           StayHealthy
           <i className="fa fa-user-md" aria-hidden="true"></i>
-        </a>
+        </Link>
       </div>
       <input type="checkbox" id="check" checked={isChecked} onChange={checkHandler}/>
       <label htmlFor="check" className="side_menu">
