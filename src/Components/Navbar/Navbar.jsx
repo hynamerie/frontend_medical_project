@@ -50,9 +50,9 @@ function Navbar() {
             <li className=" link dropdown-pf" id="profile">
               Profile
               <ul className="dropdown-pf-menu" id="dropdown-pf">
-                <li><a href="/review">Review</a></li>
-                <li><a href="/reports">Reports</a></li>
-                <li><a href="/settings">Settings</a></li>
+                <li><Link to="/review">Review</Link></li>
+                <li><Link to="/reports">Reports</Link></li>
+                <li><Link to="/settings">Settings</Link></li>
               </ul>
             </li>
           </ul>
