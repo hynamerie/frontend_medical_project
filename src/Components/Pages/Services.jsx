@@ -22,7 +22,7 @@ const Services = () => {
             <div className='service-name'>Book an Appointment</div>
           </div>
         </Link>
-        <Link>
+        <Link to="/doctor-booking">
           <div className="service-card-container">
           <div className="img-box">          
             <img src={imgConsult} alt="Instant Consultation" />
@@ -30,7 +30,7 @@ const Services = () => {
             <div className='service-name'>Instant Consultation</div>
           </div>
         </Link>
-        <Link>
+        <Link to="/doctor-booking">
           <div className="service-card-container">
           <div className="img-box">          
             <img src={imgCheck} alt="Self Checkup" />
@@ -38,7 +38,7 @@ const Services = () => {
             <div className='service-name'>Self Checkup</div>
           </div>
         </Link>
-        <Link>
+        <Link to="/blog">
           <div className="service-card-container">
           <div className="img-box">          
             <img src={imgTip} alt="Health Tips & Guidance" />

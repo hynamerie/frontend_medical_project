@@ -3,10 +3,11 @@ import React from 'react'
 export default function Footer() {
   const footStyle = {
     color: 'white',
-    backgroundColor: '#5113D6',
+    backgroundColor: 'rgba(2, 2, 2, 0.5)',
     height: "5vh",
     display: "flex",
     alignItems: "center",
+    justifyContent: "flex-end",
     position: "absolute",
     bottom: "0",
     left: "0",
@@ -16,8 +17,8 @@ export default function Footer() {
 
   return (
     <div style={footStyle}>
-      <p style={{marginLeft: "5%"}}>
-      Front-end Medical Appointment Booking Project 
+      <p style={{marginRight: "1%"}}>
+        Stay Healthy Medical Services.
       </p>
     </div>
   )

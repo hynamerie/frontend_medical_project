@@ -38,6 +38,9 @@ function Navbar() {
             {/* INCLUDE "A" TAG TO SHOW NOTIFICATIONS????? */}
           </li>
           <li className="link">
+            <Link to="/services" onClick={checkHandler}>Services</Link>
+          </li>
+          <li className="link">
             <Link to="/doctor-booking" onClick={checkHandler}>Appointments</Link>
           </li>
           <li className="link">

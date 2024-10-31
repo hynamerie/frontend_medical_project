@@ -37,11 +37,11 @@ h2 {
   position: fixed;
   bottom: 0;
   right: 0;
-  background-color: #5113D6;
+  background-color: #091474;
   color: #fff;
   text-align: left;
   line-height: 1.8;
-  padding: 20px;
+  padding: 2% 4%;
   border-radius: 16px;
 }
 .notify button {

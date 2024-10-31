@@ -36,7 +36,7 @@ const Notification = ({ children }) => {
           <>
             <div className="notify">
               <div>
-                <h4>Appointment Details</h4>
+                <h3 style={{textDecoration: "underline", color: "yellow"}}>Appointment Details</h3>
                 <p className="notify-message">
                   <strong>Doctor:</strong> <span>{doctorData?.[0]}</span>
                   <br />
