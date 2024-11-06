@@ -4,7 +4,7 @@ import Popup from 'reactjs-popup';
 import { v4 as uuidv4 } from 'uuid';
 // import { useNavigate } from 'react-router-dom';
 
-const DoctorCard = ({name, speciality, experience, ratings}) => {
+const DoctorCard = ({name, speciality, experience, ratings, image}) => {
   
 
   const [bookingData, setBookingData] = useState({namePatient: "", phonePatient: "", date: "", timeslot: ""})
@@ -61,7 +61,7 @@ const DoctorCard = ({name, speciality, experience, ratings}) => {
 {/* DOCTOR SEARCHED CARDS */}
       <div className="card-detail-container">
         <div className="card-img">
-          <i className="fa fa-user-md" aria-hidden="true"></i>        
+          <img src={image} alt="" />
         </div>
         <div className="card-details">
           <div className="detail-name">{name}</div>
@@ -91,13 +91,11 @@ const DoctorCard = ({name, speciality, experience, ratings}) => {
               <div className="popup-card">
   {/* DOCTOR INFO */}
                 <div className='card-img'>
-                <i className="fa fa-user-md" aria-hidden="true"></i>        
+                  <img src={image} alt="" />
                 </div>
                 <div className="card-details">
                   <div className="detail-name">{name}</div>
                   <div className="detail-speciality">{speciality}</div>
-                  <div className="detail-experience">{experience} years experience</div>
-                  <div className="detail-rating">Ratings: {ratings}</div>
                 </div>
 
                 {appointments.length > 0 ? (
@@ -124,9 +122,13 @@ const DoctorCard = ({name, speciality, experience, ratings}) => {
 // BOOKING FORM TO MAKE AN APPOINTMENT
                 <form action=''className="sign-form" onSubmit={handleFormSubmit}>
                   <div className="form-group">
-                    <label htmlFor="namePatient">Name</label>
+                    <h4 style={{margin: "0", fontSize: "20px"}}>Make an appointment</h4>
+                    <br />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="namePatient">Patient</label>
                     <input
-                      type="text" name='namePatient'
+                      type="text" name='namePatient' placeholder="Your name"
                       value={bookingData.namePatient}
                       onChange={handleChange}
                       required
@@ -135,7 +137,7 @@ const DoctorCard = ({name, speciality, experience, ratings}) => {
                   <div className="form-group">
                     <label htmlFor="phonePatient">Phone</label>
                     <input
-                      type="tel" name='phonePatient'
+                      type="tel" name='phonePatient' placeholder="Your phone number"
                       value={bookingData.phonePatient}
                       onChange={handleChange}
                       required

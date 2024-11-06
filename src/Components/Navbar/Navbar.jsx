@@ -41,9 +41,6 @@ function Navbar() {
             <Link to="/services" onClick={checkHandler}>Services</Link>
           </li>
           <li className="link">
-            <Link to="/doctor-booking" onClick={checkHandler}>Appointments</Link>
-          </li>
-          <li className="link">
             <Link to="/blog" onClick={checkHandler}>Health Blog</Link>
           </li>
         </ul>

@@ -20,9 +20,9 @@ function Landing_Page() {
         <div className="blob-cont">
             <div className="blue1 blob"></div>
         </div>
-        <h4>
-        Lorem ipsum dolor sit amet consectetur. Eget vestibulum convallis ut lacus curabitur fusce. Tempus nulla commodo eget non leo in viverra. Sed mi id vestibulum arcu. Nulla accumsan porttitor penatibus pellentesque lacus scelerisque amet gravida pretium. 
-        </h4>
+        <p>
+        We focus on prevention and specialty services to enhance your well-being. Our goal is to provide accessible, coordinated, and high-quality healthcare every step of the way.
+        </p>
         <Link to="/services">
           <button className="button">Get Started</button>
         </Link>              

@@ -24,8 +24,15 @@ const Sign_Up = () => {
     }
 
     return (
-      <>
-      <div className="head-text">
+      <div className='login-page'>
+        <div className="logo" id="logo">
+          <Link to="/">
+            StayHealthy
+            <i className="fa fa-user-md" aria-hidden="true"></i>
+          </Link>
+        </div>
+        <div className='login-form'>
+        <div className="head-text">
         <h1>Sign Up</h1>
         <div>
           Already a member? 
@@ -92,7 +99,8 @@ const Sign_Up = () => {
         </div>
 
       </form>
-      </>
+      </div>
+      </div>
     );
 }
 

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import imgUrl from "../../assets/bro2.png"
 
 const initSpeciality = [
-  'Dentist', 'General Physician', 'Dermatologist', 'Gynecologist/obstetrician', 'Cardiology/cardiologist ', 'Dermatology/dermatologist'
+  'Diagnostic radiology', 'Physical therapy', 'Gynecologist/obstetrician', 'Cardiology/cardiologist ', 'Dermatology/dermatologist'
 ]
 
 const FindDoctor = () => {

@@ -12,7 +12,7 @@ function BookingLayout() {
   const [isSearched, setIsSearched] = useState(false);
 
   const getDoctorsDetails = () => {
-    fetch('https://api.npoint.io/9a5543d36f1460da2f63')
+    fetch('https://api.npoint.io/c890cb5358e158b7d070')
     .then(res => res.json())
     .then(data => {
       if (searchParams.get('speciality')) {
@@ -60,10 +60,10 @@ function BookingLayout() {
       <div>
         {isSearched ? (
           <div>
-            <h2 style={{fontSize: "28px", color: "red", marginTop: "20px"}}>
+            <h3 style={{fontSize: "28px", color: "red", marginTop: "20px", marginBottom: "10px"}}>
               {filteredDoctors.length} doctors are available {searchParams.get('location')}
-            </h2>
-            <h3>Book appointments with minimum wait-time & verified doctor details</h3>
+            </h3>
+            <p>Book appointments with minimum wait-time & verified doctor details</p>
           </div>
         ) : (
         ''

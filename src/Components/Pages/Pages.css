@@ -2,6 +2,9 @@
 .service-page p {
   margin-top: 20px;
 }
+.service-page h2 {
+  margin-top: 15vh;
+}
 .service-layout {
   margin: 50px;
   display: flex;

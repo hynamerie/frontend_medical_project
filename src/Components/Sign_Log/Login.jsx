@@ -40,7 +40,8 @@ const Login = () => {
   const location = useLocation();
 
   return (
-    <div>
+    <div className='login-page'>
+      <div className='login-form'>
         <div className="head-text">
         {location.state?.message && <h3 className='log-notice'>{location.state.message}</h3>}
           <h1>Login</h1>
@@ -88,7 +89,7 @@ const Login = () => {
             </span>
           </div>
         </form>
-
+      </div>
     </div>
   )
 }
