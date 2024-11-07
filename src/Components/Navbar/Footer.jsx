@@ -17,10 +17,10 @@ export default function Footer() {
 
   return (
     <div style={footStyle}>
-      <p style={{marginLeft: "1%", fontSize: "16px", fontWeight: "300", textAlign: "left"}}>
+      <p style={{marginLeft: "1%", fontSize: "15px", fontWeight: "250", textAlign: "left"}}>
         StayHealthy Medical Services.
       </p>
-      <p style={{marginRight: "1%", fontSize: "14px", fontWeight: "200", textAlign: "right"}}>
+      <p style={{marginRight: "1%", fontSize: "15px", fontWeight: "250", textAlign: "right"}}>
          Developed by Hynamerie | IBM Front-end Developer.
       </p>
     </div>
