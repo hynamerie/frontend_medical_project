@@ -123,3 +123,9 @@
   justify-content: space-between;
   gap: 5px;
 }
+
+@media screen and (max-width: 600px) {
+  .service-page h2 {
+    margin-top: 8vh;
+  }
+}

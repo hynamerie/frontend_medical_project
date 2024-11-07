@@ -1,6 +1,7 @@
 /* BookingService.css */
 h2 {
   margin-top: 5vh;
+  margin-bottom: 20px;
 }
 .result-layout{
   margin-top: 30px;
@@ -18,7 +19,7 @@ h2 {
   gap: 10px;
   overflow: hidden;
 }
-.find-doctor img {
+.find-doctor img, .service-page img {
   height: 40vh;
 }
 .search-container {
@@ -71,9 +72,12 @@ h2 {
 }
 
 @media screen and (max-width: 600px) {
-  .find-doctor img {
+  .find-doctor img, .service-page img {
       height: auto;
       width: 90vw;
   }
+  .search-container {
+    width: 90%;
+  }
+  
 }
-

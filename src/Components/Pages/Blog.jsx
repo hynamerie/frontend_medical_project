@@ -6,7 +6,7 @@ const Blog = () => {
     <div className='service-page'>
       <h2>Health Blog</h2>
       <div>
-        <img src={imgUrl} style={{height: "40vh"}}/>
+        <img src={imgUrl} />
       </div>
       <p>
         Love yourself enough to live a healthy style.

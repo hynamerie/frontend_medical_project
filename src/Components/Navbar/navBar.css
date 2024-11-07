@@ -6,6 +6,8 @@
   height: 10vh;
   width: 100%;
   padding: 0;
+  z-index: 999;
+  position: relative;
 }
 
 /* LOGO -------------------------------------------------- */
@@ -13,6 +15,7 @@
   display: block;
 }
 #logo a {
+  font-family: 'Trebuchet MS', sans-serif;
   font-size: 2rem;
   font-weight: 600;
   color: #5113D6;
@@ -91,7 +94,7 @@
 .side_menu {
   display: none;
   position: absolute;
-  right: 10%;
+  right: 0;
   font-size: 2rem;
   font-weight: 600;
   color: #5113D6;
@@ -105,7 +108,7 @@
 
 @media screen and (max-width: 900px) {
   .header {
-    padding: 1.3rem 5%;
+    padding: 1rem 0;
   }
   .side_menu {
     display: inline-flex;

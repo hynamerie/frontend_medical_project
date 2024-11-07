@@ -4,7 +4,6 @@ export default function Footer() {
   const footStyle = {
     color: 'white',
     backgroundColor: 'rgba(2, 2, 2, 0.5)',
-    height: "5vh",
     display: "flex",
     alignItems: "center",
     justifyContent: "flex-end",
@@ -17,8 +16,8 @@ export default function Footer() {
 
   return (
     <div style={footStyle}>
-      <p style={{marginRight: "1%"}}>
-        Stay Healthy Medical Services.
+      <p style={{marginRight: "1%", fontSize: "14px", fontWeight: "200", textAlign: "right"}}>
+        StayHealthy Medical Services. Developed by Hynamerie | IBM Front-end Developer.
       </p>
     </div>
   )

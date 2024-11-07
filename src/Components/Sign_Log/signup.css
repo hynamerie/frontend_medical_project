@@ -97,6 +97,7 @@
 }
 .login-page {
   position: relative;
+  z-index: 0;
   .logo {
     position: absolute;
     height: 10vh;
