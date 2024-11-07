@@ -22,7 +22,7 @@ const Services = () => {
             <div className='service-name'>Book an Appointment</div>
           </div>
         </Link>
-        <Link to="/doctor-booking">
+        <Link to="/doctor-booking/2">
           <div className="service-card-container">
           <div className="img-box">          
             <img src={imgConsult} alt="Instant Consultation" />
@@ -30,7 +30,7 @@ const Services = () => {
             <div className='service-name'>Instant Consultation</div>
           </div>
         </Link>
-        <Link to="/doctor-booking">
+        <Link to="/checkup">
           <div className="service-card-container">
           <div className="img-box">          
             <img src={imgCheck} alt="Self Checkup" />

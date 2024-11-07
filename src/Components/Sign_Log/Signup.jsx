@@ -8,13 +8,12 @@ const Sign_Up = () => {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
     function handleSubmit(e) {
       e.preventDefault();
-      console.log("Name: " + name, "---Email: " + email, "---Phone: " + phone, password);
+      console.log("Name: " + name, "---Email: " + email, password);
       sessionStorage.setItem("loggedin", true);
       sessionStorage.setItem("user", name);
       sessionStorage.setItem("email", email);
@@ -71,7 +70,6 @@ const Sign_Up = () => {
           <input type="tel" name="phone" id="phone" 
             // pattern='[0-9]{10}' title='must include 10 numbers'
             className="form-control" placeholder="Enter your phone number"
-            value={phone} onChange={(e)=>setPhone(e.target.value)}
             />
         </div>
 

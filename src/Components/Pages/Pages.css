@@ -5,6 +5,10 @@
 .service-page h2 {
   margin-top: 15vh;
 }
+.service-page a:hover {
+  transform: scale(1.05);
+  transition: 0.5s ease;
+}
 .service-layout {
   margin: 50px;
   display: flex;

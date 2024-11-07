@@ -14,6 +14,8 @@ import Review from "./Components/Pages/Review"
 import Reports from "./Components/Pages/Reports"
 import Settings from "./Components/Pages/Settings"
 import Blog from "./Components/Pages/Blog"
+import BookingLayout2 from "./Components/DoctorBooking/BookingLayout2"
+import Checkup from "./Components/Pages/Checkup"
 
 function App() {
 
@@ -25,9 +27,11 @@ function App() {
             <Route path="/" element={<Landing_Page/>} />
             <Route path="/services" element={<Services/>}/>
             <Route path="/blog" element={<Blog/>}/>
+            <Route path="/checkup" element={<Checkup/>}/>
             
             <Route path="/doctor-booking" element={<Appointments/>}>
               <Route index element={<BookingLayout/>}/>
+              <Route path="2" element={<BookingLayout2/>}/>
             </Route>
             
             <Route element={<Auth/>}>

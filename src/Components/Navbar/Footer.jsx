@@ -6,18 +6,22 @@ export default function Footer() {
     backgroundColor: 'rgba(2, 2, 2, 0.5)',
     display: "flex",
     alignItems: "center",
-    justifyContent: "flex-end",
+    justifyContent: "space-between",
     position: "absolute",
     bottom: "0",
     left: "0",
-    width: "100vw"
+    width: "100vw",
+    padding: "10px 0"
     };
     
 
   return (
     <div style={footStyle}>
+      <p style={{marginLeft: "1%", fontSize: "16px", fontWeight: "300", textAlign: "left"}}>
+        StayHealthy Medical Services.
+      </p>
       <p style={{marginRight: "1%", fontSize: "14px", fontWeight: "200", textAlign: "right"}}>
-        StayHealthy Medical Services. Developed by Hynamerie | IBM Front-end Developer.
+         Developed by Hynamerie | IBM Front-end Developer.
       </p>
     </div>
   )
