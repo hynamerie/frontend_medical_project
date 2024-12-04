@@ -21,7 +21,7 @@ export default function Footer() {
         StayHealthy Medical Services.
       </p>
       <p style={{marginRight: "1%", fontSize: "15px", fontWeight: "250", textAlign: "right"}}>
-         Developed by Hynamerie | IBM Front-end Developer.
+         Developed by Hynavera | IBM Front-end Developer.
       </p>
     </div>
   )
